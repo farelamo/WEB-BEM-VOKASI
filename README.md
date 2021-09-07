@@ -1,4 +1,4 @@
-PERSIAPAN
+PERSIAPAN 
 
 1. Bikin Database 
 ```
@@ -31,4 +31,9 @@ php artisan migrate
 5. Run Project
 ```
 php artisan serve
+```
+
+MASUK HALAMAN DASHBOARD
+```
+Register Akun di localhost:8000/register lalu langsung login di localhost:8000/login
 ```
