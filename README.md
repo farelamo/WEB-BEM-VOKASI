@@ -10,7 +10,7 @@ Nama Database : bemvokasi
 php artisan key:generate
 ```
 
-4. NPM 
+3. NPM 
 ```
 npm install
 ```
@@ -23,7 +23,7 @@ npm ci
 npm run dev
 ```
 
-3. Run Migrate Database
+4. Run Migrate Database
 ```
 php artisan migrate
 ```
