@@ -12,4 +12,6 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{ asset('admin/assets/css/style.css')}}">
   <link rel="stylesheet" href="{{ asset('admin/assets/css/components.css')}}">
+
+  @stack('style')
 </head>
