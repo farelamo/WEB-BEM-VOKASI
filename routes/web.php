@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Livewire\Admin\Index;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/", function () {
-    return view("public/beranda");
-});
+
 
 Route::middleware(["auth:sanctum", "verified"])
-    ->get("/dashboard", function () {
-        return view("dashboard");
-    })
-    ->name("dashboard");
+    ->get("/dashboard", Index::class)->name("dashboard")
+    // TAMBAH DISINI ROUTE ADMIN DASHBOARD
+    ;
+
+Route::get('/', function(){
+    return view('user/beranda');
+});
+
+// TAMBAH DISINI ROUTE HALAMAN USER
+
+
