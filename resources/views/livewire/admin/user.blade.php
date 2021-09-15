@@ -5,66 +5,37 @@
 @endsection
 
 @section('isi')
-<div class="row">
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-            <div class="card-icon bg-primary">
-                <i class="far fa-user"></i>
-            </div>
-            <div class="card-wrap">
-                <div class="card-header">
-                    <h4>Total Admin</h4>
-                </div>
-                <div class="card-body">
-                    10
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-            <div class="card-icon bg-danger">
-                <i class="far fa-newspaper"></i>
-            </div>
-            <div class="card-wrap">
-                <div class="card-header">
-                    <h4>Total Post</h4>
-                </div>
-                <div class="card-body">
-                    42
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-            <div class="card-icon bg-warning">
-                <i class="far fa-file"></i>
-            </div>
-            <div class="card-wrap">
-                <div class="card-header">
-                    <h4>Blog</h4>
-                </div>
-                <div class="card-body">
-                    130
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-            <div class="card-icon bg-success">
-                <i class="fas fa-circle"></i>
-            </div>
-            <div class="card-wrap">
-                <div class="card-header">
-                    <h4>Total Keuangan</h4>
-                </div>
-                <div class="card-body">
-                   500k
-                </div>
-            </div>
-        </div>
+<div class="card">
+    <div class="card-body">
+        <table id="myTable" class="table table-striped">
+            <thead>
+            <tr>
+                <th width="5%">No.</th>
+                <th>Nama</th>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td class="text-center">1</td>
+                <td>
+                    <img alt="" src="assets/img/profil/" class="rounded-circle mr-2 of-cover" width="35" height="35">
+                    Nama
+                </td>
+                <td>username</td>
+                <td>
+                    <div class="badge badge-success">admin</div>
+                </td>
+                <td align="center" style="width: 90px;">
+                    <button type="button" class="btn btn-table btn-sm btn-primary" title="Edit" data-toggle="modal" data-target="#edit" onclick='edit("1")'><i class="fa fa-pen"></i></button>
+                    <button type="button" class="btn btn-table btn-sm btn-primary" title="Foto" data-toggle="modal" data-target="#foto" onclick='foto("1")'><i class="fa fa-camera"></i></button>
+                    <button type="button" class="btn btn-table btn-sm btn-danger" title="Hapus" data-toggle="modal" data-target="#hapus" onclick='hapus("1")'><i class="fa fa-times"></i></button>
+                </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 @endsection

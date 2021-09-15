@@ -16,16 +16,15 @@ use App\Http\Livewire\Admin\User;
 
 
 
-Route::middleware(["auth:sanctum", "verified"])->group(function () {
-    Route::get("/dashboard", Index::class)->name("dashboard");
-    Route::get("/user", User::class)->name("user");
+Route::middleware(["auth:sanctum", "verified"])
+    ->get("/dashboard", Index::class)->name("dashboard")
     // TAMBAH DISINI ROUTE ADMIN DASHBOARD
-});
+;
     
-// Route::middleware(["auth:sanctum", "verified"])
-//     ->get("/user", User::class)->name("user")
-    // TAMBAH DISINI ROUTE ADMIN DASHBOARD
-  //  ;
+Route::middleware(["auth:sanctum", "verified"])
+    ->get("/user", User::class)->name("user")
+    //TAMBAH DISINI ROUTE ADMIN DASHBOARD
+   ;
 
 Route::get('/', function(){
     return view('user/beranda');
