@@ -1,4 +1,4 @@
-![ERD WEB BEM] (ERD WEB BEM.png)
+![ERD WEB BEM](ERD WEB BEM.png)
 
 PERSIAPAN 
 
