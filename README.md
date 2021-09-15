@@ -1,3 +1,5 @@
+![ERD WEB BEM] (ERD WEB BEM.png)
+
 PERSIAPAN 
 
 1. Bikin Database 
