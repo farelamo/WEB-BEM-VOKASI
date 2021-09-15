@@ -11,6 +11,9 @@
         <li class="nav-item dropdown">
           <a href="/dashboard" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
         </li>
+        <li class="nav-item dropdown">
+          <a href="/user" class="nav-link"><i class="fas fa-cog"></i><span>Pengaturan User</span></a>
+        </li>
       </ul>
 
       <div class="mt-4 mb-4 p-3 hide-sidebar-mini">

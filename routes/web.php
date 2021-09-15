@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\Index;
+use App\Http\Livewire\Admin\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +18,14 @@ use App\Http\Livewire\Admin\Index;
 
 Route::middleware(["auth:sanctum", "verified"])
     ->get("/dashboard", Index::class)->name("dashboard")
+    ->get("/user", User::class)->name("dashboard")
     // TAMBAH DISINI ROUTE ADMIN DASHBOARD
     ;
+    
+// Route::middleware(["auth:sanctum", "verified"])
+//     ->get("/user", User::class)->name("user")
+    // TAMBAH DISINI ROUTE ADMIN DASHBOARD
+  //  ;
 
 Route::get('/', function(){
     return view('user/beranda');
