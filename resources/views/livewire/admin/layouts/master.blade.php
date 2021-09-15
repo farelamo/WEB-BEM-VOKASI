@@ -54,12 +54,24 @@
   <script src="{{ asset ('admin/assets/js/stisla.js')}}"></script>
 
   <!-- JS Libraies -->
+  <script src="{{ asset('admin/assets/vendors/datatables.net/jquery.dataTables.js')}}"></script>
+  <script src="{{ asset('admin/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js')}}"></script>
+  <script src="{{ asset('admin/assets/js/scripts.js')}}"></script>
+  <script src="{{ asset('admin/assets/js/custom.js')}}"></script>
 
   <!-- Template JS File -->
   <script src="{{ asset('admin/assets/js/scripts.js')}}"></script>
   <script src="{{ asset('admin/assets/js/custom.js')}}"></script>
 
   <!-- Page Specific JS File -->
+  <script>
+    $(document).ready(function () {
+      $('#myTable').DataTable({
+        "aLengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All Pages"]],
+        "pageLength": 25
+      });
+    });
+  </script>
   @stack('script')
 
 </body>
