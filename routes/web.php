@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\Index;
-use App\Http\Livewire\Admin\User;
+use App\Http\Livewire\Admin\Pages\User\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,20 +16,17 @@ use App\Http\Livewire\Admin\User;
 
 
 
-Route::middleware(["auth:sanctum", "verified"])
-    ->get("/dashboard", Index::class)->name("dashboard")
+Route::middleware(["auth:sanctum", "verified"])->group( function() { 
+    Route::get("/dashboard", Index::class)->name("dashboard");
+    Route::get("/user", User::class)->name("user");
     // TAMBAH DISINI ROUTE ADMIN DASHBOARD
-;
-    
-Route::middleware(["auth:sanctum", "verified"])
-    ->get("/user", User::class)->name("user")
-    //TAMBAH DISINI ROUTE ADMIN DASHBOARD
-   ;
+});
 
+// TAMBAH DISINI ROUTE HALAMAN USER
 Route::get('/', function(){
     return view('user/beranda');
 });
 
-// TAMBAH DISINI ROUTE HALAMAN USER
+
 
 
