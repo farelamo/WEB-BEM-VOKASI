@@ -12,6 +12,12 @@
           <a href="/dashboard" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
         </li>
         <li class="nav-item dropdown">
+          <a href="/kepengurusan" class="nav-link"><i class="fas fa-sitemap"></i><span>Kepengurusan</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="/anggota" class="nav-link"><i class="fas fa-users"></i><span>Anggota</span></a>
+        </li>
+        <li class="nav-item dropdown">
           <a href="/user" class="nav-link"><i class="fas fa-cog"></i><span>Pengaturan User</span></a>
         </li>
       </ul>

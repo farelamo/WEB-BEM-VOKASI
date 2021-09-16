@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\Index;
 use App\Http\Livewire\Admin\Pages\User\User;
+use App\Http\Livewire\Admin\Pages\Kepengurusan\Kepengurusan;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +18,11 @@ use App\Http\Livewire\Admin\Pages\User\User;
 
 
 Route::middleware(["auth:sanctum", "verified"])->group( function() { 
-    Route::get("/dashboard", Index::class)->name("dashboard");
-    Route::get("/user", User::class)->name("user");
+    Route::get("/dashboard", Index::class);
+    Route::get("/user", User::class);
+    // Route::get("/kepengurusan", Kepengurusan::class);
+    Route::get('/kepengurusan', Kepengurusan::class)->name('urus');
+    // Route::get('/kepengurusan/create', [Kepengurusan::class, ]);
     // TAMBAH DISINI ROUTE ADMIN DASHBOARD
 });
 

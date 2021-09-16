@@ -1,7 +1,23 @@
 @extends('livewire/admin/layouts/master')
 
 @section('judul')
-<h1>Pengaturan User</h1>
+<h1 style="margin-right: 10px">Kepengurusan</h1>
+{{-- <a href="/kepengurusan/create">
+    <button class="btn btn-primary">
+        Tambah Jenis Kepengurusan
+    </button>
+</a> --}}
+
+<button wire:click="create()"
+    class="btn btn-primary">
+    Create Pengurus
+</button>
+@if($isModalOpen)
+<x-jet-nav-link href="{{ route('urus') }}" :active="request()->routeIs('urus')">
+    Urus
+</x-jet-nav-link>
+@include('livewire.admin.kepengurusan.create')
+@endif
 @endsection
 
 @section('isi')
@@ -14,24 +30,21 @@
                         <thead>
                             <tr>
                                 <th width="5%">No.</th>
-                                <th>Nama</th>
-                                <th>Username</th>
-                                <th>Role</th>
+                                <th>Logo</th>
+                                <th>Jenis</th>
+                                <th>Deskripsi</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @forelse($pengurus as $data)
                             <tr>
-                                <td class="text-center">1</td>
+                                <td class="text-center">{{ $loop->iteration }}</td>
                                 <td>
-                                    <img alt="" src="assets/img/profil/" class="rounded-circle mr-2 of-cover" width="35"
-                                        height="35">
-                                    Nama
+                                    <img alt="" src="" class="rounded-circle mr-2 of-cover" width="35" height="35">
                                 </td>
-                                <td>username</td>
-                                <td>
-                                    <div class="badge badge-success">admin</div>
-                                </td>
+                                <td>{{ $data->jenis}}</td>
+                                <td>{{ $data->deskripsi}}</td>
                                 <td align="center" style="width: 90px;">
                                     <button type="button" class="btn btn-table btn-sm btn-primary" title="Edit"
                                         data-toggle="modal" data-target="#edit" onclick='edit("1")'><i
@@ -44,6 +57,11 @@
                                             class="fa fa-times"></i></button>
                                 </td>
                             </tr>
+                            @empty
+                            <tr colspan="3">
+                                <td>No data</td>
+                            </tr>
+                            @endforelse
                         </tbody>
                     </table>
                 </div>
