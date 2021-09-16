@@ -16,9 +16,9 @@
                        Dashboard
                     </x-jet-nav-link>
                 </div> --}}
-                <x-jet-nav-link href="{{ route('urus') }}" :active="request()->routeIs('urus')">
+                {{-- <x-jet-nav-link href="{{ route('urus') }}" :active="request()->routeIs('urus')">
                     Urus
-                </x-jet-nav-link>
+                </x-jet-nav-link> --}}
 {{--
             </div>
 

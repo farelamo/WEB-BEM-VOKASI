@@ -20,18 +20,15 @@ use App\Http\Livewire\Admin\Pages\Kepengurusan\Kepengurusan;
 
 
 Route::middleware(["auth:sanctum", "verified"])->group( function() { 
-<<<<<<< HEAD
     Route::get("/dashboard", Index::class);
     Route::get("/user", User::class);
     // Route::get("/kepengurusan", Kepengurusan::class);
-    Route::get('/kepengurusan', Kepengurusan::class)->name('urus');
+    Route::get('/kepengurusan', Kepengurusan::class);
     // Route::get('/kepengurusan/create', [Kepengurusan::class, ]);
-=======
-    Route::get("/dashboard", Index::class)->name("dashboard");
-    Route::get("/berita", Berita::class)->name("berita");
-    Route::get("/galeri", Galeri::class)->name("galeri");
-    Route::get("/user", User::class)->name("user");
->>>>>>> 5c4090a550145ae14484cce0180de4e89432d69b
+    Route::get("/dashboard", Index::class);
+    Route::get("/berita", Berita::class);
+    Route::get("/galeri", Galeri::class);
+    Route::get("/user", User::class);
     // TAMBAH DISINI ROUTE ADMIN DASHBOARD
 });
 
