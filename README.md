@@ -32,7 +32,12 @@ npm run dev
 php artisan migrate
 ```
 
-5. Run Project
+5. Run Migrate Database
+```
+php artisan db:seed
+```
+
+6. Run Project
 ```
 php artisan serve
 ```
