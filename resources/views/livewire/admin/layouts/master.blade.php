@@ -54,7 +54,7 @@
   <script src="{{ asset ('admin/assets/js/stisla.js')}}"></script>
 
   <!-- JS Libraies -->
-  <script src="{{ asset('admin/assets/vendors/datatables.net/jquery.dataTables.js')}}"></script>
+  <script src="{{ asset('admin/assets/vendors/datatables.net-bs4/jquery.dataTables.js')}}"></script>
   <script src="{{ asset('admin/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js')}}"></script>
   <script src="{{ asset('admin/assets/js/scripts.js')}}"></script>
   <script src="{{ asset('admin/assets/js/custom.js')}}"></script>
