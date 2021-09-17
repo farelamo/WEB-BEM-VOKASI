@@ -71,7 +71,7 @@
         "pageLength": 25
       });
     });
-  </script>
+   </script>
   @stack('script')
 
 </body>

@@ -17,65 +17,81 @@ class Kepengurusan extends Component
         return view('livewire.admin.pages.kepengurusan.kepengurusan', compact('pengurus'));
     }
 
-    public function create()
-    {
-        $this->resetCreateForm();
-        $this->openModalPopover();
-    }
-
-    public function openModalPopover()
-    {
-        $this->isModalOpen = true;
-    }
-
-    public function closeModalPopover()
-    {
-        $this->isModalOpen = false;
-    }
-
-    private function resetCreateForm(){
+    private function resetInputFields(){
         $this->jenis = '';
         $this->deskripsi = '';
+        $this->logo = '';
+        $this->gambar = '';
     }
-    
+
     public function store()
     {
-        $this->validate([
+        $validatedDate = $this->validate([
             'jenis' => 'required',
             'deskripsi' => 'required',
             'logo' => 'required',
             'gambar' => 'required',
         ]);
-    
-        urus::CreateOrCreate(['id' => $this->id_urus], [
-            'jenis' => $this->jenis,
-            'deskripsi' => $this->deskripsi,
-            'logo' => $this->logo,
-            'gambar' => $this->gambar,
-        ]);
 
-        session()->flash('message','Data created.');
+        urus::create($validatedDate);
 
-        $this->closeModalPopover();
-        $this->resetCreateForm();
+        session()->flash('message', 'Data Created Successfully.');
+
+        $this->resetInputFields();
+
+        $this->emit('CreateStore'); // Close model to using to jquery
+
     }
 
     public function edit($id)
     {
-        $pengurus = urus::findOrFail($id);
-
+        $this->updateMode = true;
+        $data = urus::where('id', $id)->first();
         $this->id_urus = $id;
-        $this->jenis = $pengurus->jenis;
-        $this->deskripsi = $pengurus->deskripsi;
-        $this->logo = $pengurus->logo;
-        $this->gambar = $pengurus->gambar;
-    
-        $this->openModalPopover();
+        $this->jenis = $data->jenis;
+        $this->deskripsi = $data->deskripsi;
+        $this->logo = $data->logo;
+        $this->gambar = $data->gambar;
+        
     }
-    
+
+    public function cancel()
+    {
+        $this->updateMode = false;
+        $this->resetInputFields();
+
+
+    }
+
+    public function update()
+    {
+        $validatedDate = $this->validate([
+            'jenis' => 'required',
+            'deskripsi' => 'required',
+            'logo' => 'required',
+            'gambar' => 'required',
+        ]);
+
+        if ($this->id_urus) {
+            $data = User::find($this->id_urus);
+            $data->update([
+                'jenis' => $this->jenis,
+                'deskripsi' => $this->deskripsi,
+                'logo' => $this->logo,
+                'gambar' => $this->gambar
+            ]);
+            $this->updateMode = false;
+            session()->flash('message', 'Data Updated Successfully.');
+            $this->resetInputFields();
+
+        }
+    }
+
     public function delete($id)
     {
-        urus::find($id)->delete();
-        session()->flash('message', 'Data deleted.');
+        if($id){
+            urus::where('id',$id)->delete();
+            session()->flash('message', 'Data Deleted Successfully.');
+        }
     }
 }
