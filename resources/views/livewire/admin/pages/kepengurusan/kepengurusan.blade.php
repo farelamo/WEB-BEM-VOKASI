@@ -1,15 +1,19 @@
 @extends('livewire/admin/layouts/master')
 
 {{-- @include('livewire.update') --}}
+@push('style')
+    @livewireStyles
+    @livewireScripts
+@endpush
 
 @section('judul')
     <h1 style="margin-right: 10px">Kepengurusan</h1>
-    @include('livewire/admin/pages/kepengurusan/create')
+    {{-- @include('livewire/admin/pages/kepengurusan/create') --}}
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create">
+        Create Baru
+    </button>
 @endsection
 
-@push('style')
-    @livewireStyles
-@endpush
 
 @section('isi')
     <div class="card">
@@ -24,6 +28,7 @@
                                     <th>Logo</th>
                                     <th>Jenis</th>
                                     <th>Deskripsi</th>
+                                    <th>Gambar</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -31,11 +36,10 @@
                                 @forelse($pengurus as $data)
                                     <tr>
                                         <td class="text-center">{{ $loop->iteration }}</td>
-                                        <td>
-                                            <img alt="" src="" class="rounded-circle mr-2 of-cover" width="35" height="35">
-                                        </td>
+                                        <td>{{ $data->logo }}</td>
                                         <td>{{ $data->jenis }}</td>
                                         <td>{{ $data->deskripsi }}</td>
+                                        <td>{{ $data->gambar }}</td>
                                         <td align="center" style="width: 90px;">
                                             <button type="button" class="btn btn-table btn-sm btn-primary"
                                                 data-toggle="modal" data-target="#updateModal"
@@ -60,13 +64,76 @@
             </div>
         </div>
     </div>
-
-    @push('script')
-        <script type="text/javascript">
-            window.livewire.on('CreateStore', () => {
-                $('#create').modal('show');
-            });
-            
-        </script>
-    @endpush
 @endsection
+
+@section('modal')
+    {{-- @include('livewire/admin/pages/kepengurusan/create') --}}
+    <div wire:ignore.self class="modal fade" id="create" tabindex="-1" role="dialog" style="display: none;"
+    aria-modal="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fa fa-pen"></i> Tambah Kategori Konten</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <hr>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <p>Judul</p>
+                        <input type="text" class="form-control" wire:model="jenis" name="jenis">
+                        @error('jenis')
+                        <label class="text-danger">
+                            {{ $message }}
+                        </label>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <p>Deskripsi</p>
+                        <input type="text" class="form-control" wire:model="deskripsi" name="deskripsi">
+                        @error('deskripsi')
+                        <label class="text-danger">
+                            {{ $message }}
+                        </label>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <p>Logo</p>
+                        <input type="text" class="form-control" wire:model="logo" name="logo">
+                        @error('logo')
+                        <label class="text-danger">
+                            {{ $message }}
+                        </label>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <p>Gambar</p>
+                        <input type="text" class="form-control" wire:model="gambar" name="gambar">
+                        @error('gambar')
+                        <label class="text-danger">
+                            {{ $message }}
+                        </label>
+                        @enderror
+                    </div>
+                    <hr>
+                    <div class="modal-footer p-0 pt-3">
+                        <button type="button" data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-shadow" wire:click.prevent="simpan">
+                            <i class="fa fa-check"></i><span> Submit</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+@push('script')
+    <script>
+        window.livewire.on('create', ()=> {
+            $('create').modal('hide');
+        });
+    </script>
+@endpush

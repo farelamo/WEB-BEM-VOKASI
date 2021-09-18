@@ -23,11 +23,8 @@ Route::middleware(["auth:sanctum", "verified"])->group( function() {
     Route::get("/dashboard", Index::class);
     Route::get("/user", User::class);
     Route::get('/kepengurusan', Kepengurusan::class);
-    // Route::get('/kepengurusan/create', [Kepengurusan::class, ]);
-    Route::get("/dashboard", Index::class);
     Route::get("/berita", Berita::class);
     Route::get("/galeri", Galeri::class);
-    Route::get("/user", User::class);
     // TAMBAH DISINI ROUTE ADMIN DASHBOARD
 });
 

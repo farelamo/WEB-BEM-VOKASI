@@ -15,7 +15,7 @@
       <!-- SIDEBAR -->
       @include('livewire/admin/partials/sidebar')
       <!-- END SIDEBAR -->
-
+      
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
@@ -25,6 +25,7 @@
 
           <div class="section-body">
             @yield('isi')
+            {{-- @livewire('admin.pages.kepengurusan.kepengurusan') --}}
           </div>
         </section>
       </div>
@@ -40,6 +41,8 @@
     </div>
   </div>
 
+  @yield('modal')
+  
   <!-- General JS Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -67,8 +70,8 @@
   <script>
     $(document).ready(function () {
       $('#myTable').DataTable({
-        "aLengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All Pages"]],
-        "pageLength": 25
+        "aLengthMenu": [[5, 10, 15, -1], [5, 10, 15, "All Pages"]],
+        "pageLength": 5
       });
     });
    </script>

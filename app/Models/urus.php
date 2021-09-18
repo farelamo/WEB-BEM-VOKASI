@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class urus extends Model
 {
-    use HasFactory;
+    // use HasFactory;
     protected $table = 'jenis_kepengurusan';
     protected $fillable = ['jenis', 'deskripsi', 'logo', 'gambar'];
-
+    public $timestamps = false;
 }

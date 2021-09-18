@@ -35,4 +35,6 @@
   </style>
 
   @stack('style')
+  @livewireStyles
+  @livewireScripts
 </head>
