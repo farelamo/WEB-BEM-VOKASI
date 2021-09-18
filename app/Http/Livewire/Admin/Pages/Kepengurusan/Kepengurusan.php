@@ -23,10 +23,10 @@ class Kepengurusan extends Component
     }
 
     protected $rules = [
-            'jenis' => 'required|min:3',
-            'deskripsi' => 'required|min:3',
-            'logo' => 'required|min:3',
-            'gambar' => 'required|min:3',
+            'jenis' => 'required',
+            'deskripsi' => 'required',
+            'logo' => 'required',
+            'gambar' => 'required',
     ];
 
     protected $messages = [
@@ -36,14 +36,12 @@ class Kepengurusan extends Component
         'gambar.required' => 'Kolom gambar Harus Diisi !!',
     ];
 
-    public function simpan()
+    public function simpan(Request $request)
     {
        
-        $validasi = $this->validate();
-        urus::create($validasi);
-        session()->flash('message', 'Data Berhasil Disimpan!!');
-        $this->ClearForm();
-        $this->emit('create');
+        // $validasi = $this->validate();
+        // urus::create($validasi);
+        
         
         //     $data->jenis = $request->jenis;
         //     $data->deskripsi = $request->deskripsi;
@@ -53,13 +51,15 @@ class Kepengurusan extends Component
         
         // urus::create($validatedDate);
 
-        // $data = urus::create([
-        //     'jenis' => $request->jenis,
-        //     'deskripsi' => $request->deskripsi,
-        //     'logo' => $request->logo,
-        //     'gambar' => $request->gambar
-        // ]);
-
+         urus::create([
+            'jenis' => $request->jenis,
+            'deskripsi' => $request->deskripsi,
+            'logo' => $request->logo,
+            'gambar' => $request->gambar
+        ]);
+        // session()->flash('message', 'Data Berhasil Disimpan!!');
+        // $this->ClearForm();
+        // $this->emit('create');
             // urus::create($request->all()); 
             // urus::create([
             //         'jenis' => $request->jenis,
@@ -67,7 +67,7 @@ class Kepengurusan extends Component
             //         'logo' => $request->logo,
             //         'gambar' => $request->gambar
             //     ]);
-            // return redirect('kepengurusan');
+            return redirect('/kepengurusan');
 
     }
 
