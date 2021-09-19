@@ -18,16 +18,7 @@
       
       <!-- Main Content -->
       <div class="main-content">
-        <section class="section">
-          <div class="section-header">
-            @yield('judul')
-          </div>
-
-          <div class="section-body">
-            @yield('isi')
-            {{-- @livewire('admin.pages.kepengurusan.kepengurusan') --}}
-          </div>
-        </section>
+        @yield('isi')
       </div>
       <footer class="main-footer">
         <div class="footer-left">
