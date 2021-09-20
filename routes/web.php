@@ -23,7 +23,7 @@ Route::middleware(["auth:sanctum", "verified"])->group( function() {
     Route::get("/dashboard", Index::class);
     Route::get("/user", User::class);
     Route::get('/kepengurusan', Kepengurusan::class);
-    Route::post('/kepengurusan', [Kepengurusan::class, 'simpan']);
+    // Route::post('/kepengurusan', [Kepengurusan::class, 'simpan']);
     // Route::post('/kepengurusan', function () {
     //     return 'Hello World';
     // });

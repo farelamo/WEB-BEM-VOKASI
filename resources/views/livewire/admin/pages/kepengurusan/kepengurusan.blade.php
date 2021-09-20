@@ -80,43 +80,27 @@
             </div>
             <hr>
             <div class="modal-body">
-                <form action="/kepengurusan" method="post">
-                    @csrf
+                <form  wire:submit.prevent="saveContact">
+
                     <div class="form-group">
                         <p>Judul</p>
-                        <input type="text" class="form-control" name="jenis">
-                        @error('jenis')
-                        <label class="text-danger">
-                            {{ $message }}
-                        </label>
-                        @enderror
+                        <input type="text" class="form-control" wire:model="jenis">
+                        @error('jenis') <span class="error">{{ $message }}</span> @enderror
                     </div>
                     <div class="form-group">
                         <p>Deskripsi</p>
-                        <input type="text" class="form-control" name="deskripsi">
-                        @error('deskripsi')
-                        <label class="text-danger">
-                            {{ $message }}
-                        </label>
-                        @enderror
+                        <input type="text" class="form-control" wire:model="deskripsi">
+                        @error('deskripsi') <span class="error">{{ $message }}</span> @enderror
                     </div>
                     <div class="form-group">
                         <p>Logo</p>
-                        <input type="text" class="form-control" name="logo">
-                        @error('logo')
-                        <label class="text-danger">
-                            {{ $message }}
-                        </label>
-                        @enderror
+                        <input type="text" class="form-control" wire:model="logo">
+                        @error('logo') <span class="error">{{ $message }}</span> @enderror
                     </div>
                     <div class="form-group">
                         <p>Gambar</p>
-                        <input type="text" class="form-control" name="gambar">
-                        @error('gambar')
-                        <label class="text-danger">
-                            {{ $message }}
-                        </label>
-                        @enderror
+                        <input type="text" class="form-control" wire:model="gambar" >
+                        @error('gambar') <span class="error">{{ $message }}</span> @enderror
                     </div>
                     <hr>
                     <div class="modal-footer p-0 pt-3">

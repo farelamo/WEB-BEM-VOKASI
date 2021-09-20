@@ -16,8 +16,8 @@ class Kepengurusan extends Component
     public function render()
     {
         $this->pengurus = urus::all();
-        return view('livewire.admin.pages.kepengurusan.kepengurusan');
-                // ->extends('livewire.admin.layouts.master')
+        return view('livewire.admin.pages.kepengurusan.kepengurusan')
+                ->extends('livewire.admin.layouts.master');
                 // ->section('judul');
                 // ->section('isi');
     }
@@ -29,18 +29,24 @@ class Kepengurusan extends Component
             'gambar' => 'required',
     ];
 
-    protected $messages = [
-        'jenis.required' => 'Kolom Jenis Harus Diisi !!',
-        'deskripsi.required' => 'Kolom deskripsi Harus Diisi !!',
-        'logo.required' => 'Kolom logo Harus Diisi !!',
-        'gambar.required' => 'Kolom gambar Harus Diisi !!',
-    ];
+    // protected $messages = [
+    //     'jenis.required' => 'Kolom Jenis Harus Diisi !!',
+    //     'deskripsi.required' => 'Kolom deskripsi Harus Diisi !!',
+    //     'logo.required' => 'Kolom logo Harus Diisi !!',
+    //     'gambar.required' => 'Kolom gambar Harus Diisi !!',
+    // ];
 
-    public function simpan(Request $request)
+    // public function updated($propertyName)
+    // {
+    //     $this->validateOnly($propertyName);
+    // }
+
+    public function saveContact()
     {
        
         // $validasi = $this->validate();
-        // urus::create($validasi);
+        $this->validate();
+        urus::create($validasi);
         
         
         //     $data->jenis = $request->jenis;
@@ -51,23 +57,25 @@ class Kepengurusan extends Component
         
         // urus::create($validatedDate);
 
-         urus::create([
-            'jenis' => $request->jenis,
-            'deskripsi' => $request->deskripsi,
-            'logo' => $request->logo,
-            'gambar' => $request->gambar
-        ]);
-        // session()->flash('message', 'Data Berhasil Disimpan!!');
-        // $this->ClearForm();
-        // $this->emit('create');
-            // urus::create($request->all()); 
-            // urus::create([
-            //         'jenis' => $request->jenis,
-            //         'deskripsi' => $request->deskripsi,
-            //         'logo' => $request->logo,
-            //         'gambar' => $request->gambar
-            //     ]);
-            return redirect('/kepengurusan');
+        //  urus::create([
+        //     'jenis' => $request->jenis,
+        //     'deskripsi' => $request->deskripsi,
+        //     'logo' => $request->logo,
+        //     'gambar' => $request->gambar
+        // ]);
+
+        // urus::create($request->all()); 
+        // urus::create([
+        //             'jenis' => $request->jenis,
+        //             'deskripsi' => $request->deskripsi,
+        //             'logo' => $request->logo,
+        //             'gambar' => $request->gambar
+        //         ]);
+                
+                //         session()->flash('message', 'Data Berhasil Disimpan!!');
+                //         $this->ClearForm();
+                //         $this->emit('create');
+                // return redirect('/kepengurusan');
 
     }
 
