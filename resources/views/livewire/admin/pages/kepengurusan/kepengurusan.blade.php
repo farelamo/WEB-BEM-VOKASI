@@ -6,64 +6,66 @@
     @livewireScripts
 @endpush
 
-@section('judul')
-    <h1 style="margin-right: 10px">Kepengurusan</h1>
-    {{-- @include('livewire/admin/pages/kepengurusan/create') --}}
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create">
-        Create Baru
-    </button>
-@endsection
-
-
 @section('isi')
-    <div class="card">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-12">
-                    <div class="table-responsive">
-                        <table id="myTable" class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th width="5%">No.</th>
-                                    <th>Logo</th>
-                                    <th>Jenis</th>
-                                    <th>Deskripsi</th>
-                                    <th>Gambar</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse($pengurus as $data)
+<section class="section">
+    <div class="section-header">
+        <h1 style="margin-right: 10px">Kepengurusan</h1>
+        {{-- @include('livewire/admin/pages/kepengurusan/create') --}}
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create">
+            Create Baru
+        </button>
+    </div>
+    <div class="section-body">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table id="myTable" class="table table-striped">
+                                <thead>
                                     <tr>
-                                        <td class="text-center">{{ $loop->iteration }}</td>
-                                        <td>{{ $data->logo }}</td>
-                                        <td>{{ $data->jenis }}</td>
-                                        <td>{{ $data->deskripsi }}</td>
-                                        <td>{{ $data->gambar }}</td>
-                                        <td align="center" style="width: 90px;">
-                                            <button type="button" class="btn btn-table btn-sm btn-primary"
-                                                data-toggle="modal" data-target="#updateModal"
-                                                wire:click="edit({{ $data->id }})">
-                                                <i class="fa fa-pen"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-table btn-sm btn-danger"
-                                                wire:click="delete({{ $data->id }})">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
+                                        <th width="5%">No.</th>
+                                        <th>Logo</th>
+                                        <th>Jenis</th>
+                                        <th>Deskripsi</th>
+                                        <th>Gambar</th>
+                                        <th>Action</th>
                                     </tr>
-                                @empty
-                                    <tr colspan="3">
-                                        <td>No data</td>
-                                    </tr>
-                                @endforelse
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @forelse($pengurus as $data)
+                                        <tr>
+                                            <td class="text-center">{{ $loop->iteration }}</td>
+                                            <td>{{ $data->logo }}</td>
+                                            <td>{{ $data->jenis }}</td>
+                                            <td>{{ $data->deskripsi }}</td>
+                                            <td>{{ $data->gambar }}</td>
+                                            <td align="center" style="width: 90px;">
+                                                <button type="button" class="btn btn-table btn-sm btn-primary"
+                                                    data-toggle="modal" data-target="#updateModal"
+                                                    wire:click="edit({{ $data->id }})">
+                                                    <i class="fa fa-pen"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-table btn-sm btn-danger"
+                                                    wire:click="delete({{ $data->id }})">
+                                                    <i class="fa fa-times"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <tr colspan="3">
+                                            <td>No data</td>
+                                        </tr>
+                                    @endforelse
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 @endsection
 
 @section('modal')
