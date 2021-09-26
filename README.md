@@ -6,7 +6,7 @@ PERSIAPAN
 
 1. Bikin Database 
 ```
-Nama Database : bemvokasi
+Nama Database : bem_vokasi_ub
 ```
 
 2. Generate Key
