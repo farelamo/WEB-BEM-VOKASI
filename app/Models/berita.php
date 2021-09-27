@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class berita extends Model
 {
     use HasFactory;
-    protected $table = 'event';
+    protected $table = 'berita';
     protected $fillable = ['judul', 'waktu', 'tempat', 'deskripsi', 'gambar'];
+    public $timestamps = false;
 }

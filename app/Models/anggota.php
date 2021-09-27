@@ -9,6 +9,7 @@ class anggota extends Model
 {
     use HasFactory;
     protected $table = 'anggota';
+    // protected $guarded = ['id'];
     protected $fillable = ['nama', 'prodi', 'foto', 'gender', 'jabatan', 'jenis_kepengurusan_id'];
-
+    public $timestamps = false;
 }

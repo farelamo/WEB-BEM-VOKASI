@@ -10,4 +10,5 @@ class galeri extends Model
     use HasFactory;
     protected $table = 'galeri';
     protected $fillable = ['judul_kegiatan', 'gambar'];
+    public $timestamps = false;
 }

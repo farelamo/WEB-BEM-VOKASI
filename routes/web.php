@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Admin\Index;
-use App\Http\Livewire\Admin\Pages\Berita\Berita;
-use App\Http\Livewire\Admin\Pages\Galeri\Galeri;
-use App\Http\Livewire\Admin\Pages\User\User;
-use App\Http\Livewire\Admin\Pages\Kepengurusan\Kepengurusan;
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\kepengurusanController;
+use App\Http\Controllers\anggotaController;
+use App\Http\Controllers\beritaController;
+use App\Http\Controllers\galeriController;
+use App\Http\Controllers\userController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,15 +21,12 @@ use App\Http\Livewire\Admin\Pages\Kepengurusan\Kepengurusan;
 
 
 Route::middleware(["auth:sanctum", "verified"])->group( function() { 
-    Route::get("/dashboard", Index::class);
-    Route::get("/user", User::class);
-    Route::get('/kepengurusan', Kepengurusan::class);
-    // Route::post('/kepengurusan', [Kepengurusan::class, 'simpan']);
-    // Route::post('/kepengurusan', function () {
-    //     return 'Hello World';
-    // });
-    Route::get("/berita", Berita::class);
-    Route::get("/galeri", Galeri::class);
+    Route::resource('/dashboard', homeController::class);
+    Route::resource('/kepengurusan',  kepengurusanController::class);
+    Route::resource('/anggota',  anggotaController::class);
+    Route::resource('/berita',   beritaController::class);
+    Route::resource('/galeri',  galeriController::class);
+    Route::resource('/user', userController::class);
     // TAMBAH DISINI ROUTE ADMIN DASHBOARD
 });
 

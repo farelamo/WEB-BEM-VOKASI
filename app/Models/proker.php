@@ -10,4 +10,5 @@ class proker extends Model
     use HasFactory;
     protected $table = 'proker';
     protected $fillable = ['judul_proker', 'gambar', 'tipe', 'jenis_kepengurusan_id'];
+    public $timestamps = false;
 }
