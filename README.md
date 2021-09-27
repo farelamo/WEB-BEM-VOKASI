@@ -26,18 +26,22 @@ npm ci
 ```
 npm run dev
 ```
-
-4. Run Migrate Database
+4. Install Debugbar
 ```
-php artisan migrate
+composer require barryvdh/laravel-debugbar
 ```
 
 5. Run Migrate Database
 ```
+php artisan migrate
+```
+
+6. Run Migrate Database
+```
 php artisan db:seed
 ```
 
-6. Run Project
+7. Run Project
 ```
 php artisan serve
 ```
