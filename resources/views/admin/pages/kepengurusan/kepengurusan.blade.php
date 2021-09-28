@@ -42,8 +42,8 @@
                                         <td>{{ $data->deskripsi }}</td>
                                         <td align="center" style="width: 90px;">
 
-                                            <a href="#" class="btn btn-table btn-sm btn-primary fa fa-pen edit"></a>
-                                            <a href="#" class="btn btn-table btn-sm btn-danger fa fa-times hapus"></a>
+                                            <a href="#" class="btn btn-table btn-sm btn-primary edit"><i class="fa fa-pen"></i></a>
+                                            <a href="#" class="btn btn-table btn-sm btn-danger hapus"><i class="fa fa-times"></i></a>
 
                                         </td>
                                     </tr>

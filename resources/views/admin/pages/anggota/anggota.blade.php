@@ -3,7 +3,7 @@
 @section('isi')
 <section class="section">
     <div class="section-header">
-        <h1 style="margin-right: 10px">anggota</h1>
+        <h1 style="margin-right: 10px">Anggota</h1>
         <a href="anggota/create" class="btn btn-primary" style="margin-right: 10px">
             Tambah Baru
         </a>
@@ -41,8 +41,8 @@
                                         <td>{{ $data->jabatan }}</td>
                                         <td align="center" style="width: 90px;">
 
-                                            <a href="anggota/{{ $data->id }}/edit" class="btn btn-table btn-sm btn-primary fa fa-pen"></a>
-                                            <a href="#" class="btn btn-table btn-sm btn-danger fa fa-times hapus"></a>
+                                            <a href="anggota/{{ $data->id }}/edit" class="btn btn-table btn-sm btn-primary"><i class="fa fa-pen"></i></a>
+                                            <a href="#" class="btn btn-table btn-sm btn-danger hapus"><i class="fa fa-times"></i></a>
 
                                         </td>
                                     </tr>
