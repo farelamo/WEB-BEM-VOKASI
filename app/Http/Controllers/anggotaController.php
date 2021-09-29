@@ -18,7 +18,8 @@ class anggotaController extends Controller
     public function index()
     {
         $anggota = anggota::all();
-        return view('admin/pages/anggota/anggota', compact('anggota'));
+        $urus = urus::all();
+        return view('admin/pages/anggota/anggota', compact('anggota', 'urus'));
     }
 
     /**
