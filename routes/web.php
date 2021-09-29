@@ -6,6 +6,7 @@ use App\Http\Controllers\kepengurusanController;
 use App\Http\Controllers\anggotaController;
 use App\Http\Controllers\beritaController;
 use App\Http\Controllers\galeriController;
+use App\Http\Controllers\profilController;
 use App\Http\Controllers\userController;
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Route::middleware(["auth:sanctum", "verified"])->group( function() {
     Route::resource('/anggota',  anggotaController::class);
     Route::resource('/berita',   beritaController::class);
     Route::resource('/galeri',  galeriController::class);
+    Route::resource('/profil', profilController::class);
     Route::resource('/user', userController::class);
     // TAMBAH DISINI ROUTE ADMIN DASHBOARD
 });
