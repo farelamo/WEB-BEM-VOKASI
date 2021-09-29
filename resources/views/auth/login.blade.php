@@ -1,3 +1,7 @@
+<?php 
+ date_default_timezone_set('Asia/Jakarta')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +30,7 @@
       <div class="d-flex flex-wrap align-items-stretch">
         <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
           <div class="p-4 m-3">
-            <img src="{{ asset('admin/assets/img/stisla-fill.svg')}}" alt="logo" width="80"
+            <img src="{{ asset('admin/assets/img/LOGO BEM2.png')}}" alt="logo" width="150px" height="160px"
               class="shadow-light rounded-circle mb-5 mt-2">
             <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Admin Dashboard</span>
             </h4>
@@ -61,16 +65,13 @@
               </div>
 
               <div class="form-group text-right">
-                <a href="auth-forgot-password.html" class="float-left mt-3">
-                  Forgot Password?
-                </a>
                 <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right" tabindex="4">
                   Login
                 </button>
               </div>
 
               <div class="mt-5 text-center">
-                Don't have an account? <a href="auth-register.html">Create new one</a>
+                Malang, {{ date('d-m-Y H:i:s') }}
               </div>
             </form>
 

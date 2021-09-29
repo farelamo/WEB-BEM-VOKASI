@@ -77,6 +77,24 @@
     .modal-header {
       padding: 25px;
     }
+
+    @media (max-width: 650px) {
+      .fc-toolbar-chunk {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .fc-header-toolbar {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        text-align: center !important;
+      }
+    }
   </style>
 
   @stack('style')

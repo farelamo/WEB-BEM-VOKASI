@@ -23,8 +23,6 @@ integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07j
 <script src="{{ asset('js/timeline.js')}}"></script>
 
 <!-- Template JS File -->
-<script src="{{ asset('admin/assets/js/scripts.js')}}"></script>
-<script src="{{ asset('admin/assets/js/custom.js')}}"></script>
 
 <!-- Page Specific JS File -->
 <script>
@@ -35,4 +33,5 @@ $(document).ready(function () {
   });
 });
 </script>
+
 @stack('scripts')
