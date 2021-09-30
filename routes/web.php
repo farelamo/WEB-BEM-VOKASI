@@ -26,7 +26,12 @@ Route::middleware(["auth:sanctum", "verified"])->group( function() {
     Route::resource('/anggota',  anggotaController::class);
     Route::resource('/berita',   beritaController::class);
     Route::resource('/galeri',  galeriController::class);
-    Route::resource('/user', userController::class);
+    
+    
+    // if( Auth::guard('superadmin')->check()) {
+        Route::resource('/user', userController::class);
+    // }
+
     // TAMBAH DISINI ROUTE ADMIN DASHBOARD
 });
 

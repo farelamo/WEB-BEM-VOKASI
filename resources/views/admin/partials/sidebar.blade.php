@@ -21,9 +21,13 @@
         <li class="nav-item dropdown">
           <a href="/galeri" class="nav-link"><i class="fa fa-image"></i><span>Galeri</span></a>
         </li>
+
+        @if( Auth::user()->level == 'superadmin')
         <li class="nav-item dropdown">
           <a href="/user" class="nav-link"><i class="fas fa-cog"></i><span>Pengaturan User</span></a>
         </li>
+        @endif
+
       </ul>
 
       <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
