@@ -20,17 +20,16 @@
           </p>
         </div>
         <div class="logo-center text-center">
-          <div class="logo">
-            <img src={{ asset('storage/assets/images/logo-bem.png') }} class="img-fluid">
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-md-7 text-center">
-              <div class="text-md-head text-primary-1 my-5 fw-bold">
-                Griffina, mahluk mitologi bertubuh setengah rajawali dan singa yang melambangkan simbol tanggung jawab,
-                pelindung serta penyeimbang yang merepresentasikan bagaimana peran dari BEM VOKASI UB 2021
-              </div>
+            <div class="logo">
+                <img src={{ asset('storage/assets/images/logo-bem.png') }} class="img-fluid" >
             </div>
-          </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7 text-center">
+                    <div class="text-md-head text-primary-1 my-5 fw-bold">
+                        Griffina, mahluk mitologi bertubuh setengah rajawali dan singa yang melambangkan simbol tanggung jawab, pelindung serta penyeimbang yang merepresentasikan bagaimana peran dari BEM VOKASI UB 2021
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="wave-right">
           <img src={{ asset('storage/assets/images/wave-right.png') }} alt="wave-right">
@@ -104,49 +103,51 @@
         <div class="my-5 py-5">
           <img src={{ asset('storage/assets/images/img-leader.png') }} class="img-fluid" alt="ketua-wakil">
         </div>
-        <a href="#" class="btn btn-jumbotron">Selengkapnya</a>
-      </div>
     </div>
   </section>
   {{--  --}}
   @include('user.partials.gallery')
+    <div class="content my-5 py-5">
+        <img src={{ asset('storage/assets/images/img-leader.png')}} class="img-fluid" alt="ketua-wakil">
+    </div>
+    <a href="#" class="btn btn-jumbotron">Selengkapnya</a>
+</section>
 
-  <section id="contact-us">
+@include('public.partials.gallery')
+
+<section id="contact-us">
     <div class="head-title my-5 text-primary-1">
-      <div class="text-lg-head text-center fw-bold">
-        HUBUNGI KAMI
-      </div>
+        <div class="text-lg-head text-center fw-bold">
+            HUBUNGI KAMI
+        </div>
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <img src={{ asset('storage/assets/images/maps.png') }} class="img-fluid" alt="maps">
+        <div class="row">
+            <div class="col-md-8">
+                <img src={{ asset('storage/assets/images/maps.png') }} class="img-fluid" alt="maps">
+            </div>
+            <div class="col-md-4">
+                <div class="social-media">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-md-head fw-bold py-3">
+                            <i class="fab fa-instagram fa-lg icon-sosmed"></i> 
+                            @bemvokasiub
+                        </li>
+                        <li class="list-group-item text-md-head fw-bold py-3">
+                            <i class="fab fa-twitter fa-lg icon-sosmed"></i> 
+                            @bemvokasiub</li>
+                        <li class="list-group-item text-md-head fw-bold py-3">
+                            <i class="fab fa-youtube fa-lg icon-sosmed"></i> 
+                            @bemvokasiub</li>
+                        <li class="list-group-item text-md-head fw-bold py-3">
+                            <i class="far fa-envelope fa-lg icon-sosmed"></i> 
+                            @bemvokasiub</li>
+                      </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-          <div class="social-media">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item text-md-head fw-bold py-3">
-                <i class="fab fa-instagram fa-lg icon-sosmed"></i>
-                @bemvokasiub
-              </li>
-              <li class="list-group-item text-md-head fw-bold py-3">
-                <i class="fab fa-twitter fa-lg icon-sosmed"></i>
-                @bemvokasiub
-              </li>
-              <li class="list-group-item text-md-head fw-bold py-3">
-                <i class="fab fa-youtube fa-lg icon-sosmed"></i>
-                @bemvokasiub
-              </li>
-              <li class="list-group-item text-md-head fw-bold py-3">
-                <i class="far fa-envelope fa-lg icon-sosmed"></i>
-                @bemvokasiub
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
 
 @endsection

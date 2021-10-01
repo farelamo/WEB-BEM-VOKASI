@@ -11,17 +11,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
-
+  <link rel="stylesheet" href="{{asset('css/templatemo-training-studio.css')}}">
+  
   <!-- FontAwesome -->
-  <link rel="stylesheet" href={{asset('plugins/fontawesome-free/css/all.min.css')}} />
+  <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
 
   <!-- Custom CSS -->
-  <link href={{ asset('css/public.css') }} rel="stylesheet">
+  <!-- <link href={{ asset('css/public.css') }} rel="stylesheet"> -->
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">-->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Swiper -->
   <link
       rel="stylesheet"
@@ -34,11 +36,11 @@
 
 <body>
 
-  @include('user.partials.navbar')
+  <!-- @include('user.partials.navbar') -->
 
   @yield('content')
 
-  @include('user.partials.footer')
+  <!-- @include('user.partials.footer') -->
   <!-- swiper -->
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script>
@@ -51,9 +53,20 @@
   <!-- end-swiper  -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
+    <script src="{{asset('js/scrollreveal.min.js')}}"></script>
+    <script src="{{asset('js/waypoints.min.js')}}"></script>
+    <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('js/imgfix.min.js')}}"></script>
+    <script src="{{asset('js/mixitup.js')}}"></script>
+    <script src="{{asset('js/accordions.js')}}"></script>
+
+    <!-- Global Init -->
+    <script src="{{asset('js/custom.js')}}"></script>
 
 </body>
 
