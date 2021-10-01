@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\user;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\File;
 
 class profilController extends Controller
 {
@@ -13,8 +14,7 @@ class profilController extends Controller
      */
     public function index()
     {
-        $profil = user::all();
-        return view('admin/pages/profil/profil', compact('profil'));
+        return view('admin/pages/profil/profil');
     }
 
     /**
@@ -69,7 +69,30 @@ class profilController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findorfail($id);
+        if($request->photo){
+            // dd($request->photo);
+            $foto = $user->foto;
+            File::delete("images/profil/" . $foto);
+            $upload = $request->photo;
+            $upload_name = time() .'.'. $upload->getClientOriginalExtension();
+            $upload->move('images/profil/' , $upload_name);
+
+            $user_update = [
+                'profile_photo_path' => $upload_name
+            ];
+            
+        }else {
+            $user_update = [
+                'email' => $request->email,
+                'name' => $request->name,
+            ];
+
+        }
+
+        $user->update($user_update);
+
+        return redirect('/profil');
     }
 
     /**

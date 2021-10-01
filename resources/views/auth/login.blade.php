@@ -30,8 +30,10 @@
       <div class="d-flex flex-wrap align-items-stretch">
         <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
           <div class="p-4 m-3">
-            <img src="{{ asset('admin/assets/img/LOGO BEM2.png')}}" alt="logo" width="150px" height="160px"
-              class="shadow-light rounded-circle mb-5 mt-2">
+            <div class="row">
+              <img src="{{ asset('admin/assets/img/LOGO BEM2.png')}}" alt="logo" width="170px"
+                class="mb-5 mt-2 mx-auto">
+            </div>
             <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Admin Dashboard</span>
             </h4>
 

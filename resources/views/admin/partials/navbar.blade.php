@@ -8,7 +8,15 @@
   </form>
   <ul class="navbar-nav navbar-right">
     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-        <img alt="image" src="admin/assets/img/profil/{{ Auth::user()->profile_photo_path }}" class="rounded-circle mr-2 d-inline-block">
+        
+      <img alt="image" 
+        @if(Auth::user()->profile_photo_path != '')
+            src="{{ asset('images/profil/' . Auth::user()->profile_photo_path)}}" 
+        @else 
+            src="{{ asset('admin/assets/img/avatar/avatar-1.png')}}"
+        @endif
+        
+        class="rounded-circle mr-2 d-inline-block">
         <div class="d-sm-none d-lg-inline-block">{{ Auth::user()->name }}</div>
       </a>
 
@@ -18,14 +26,6 @@
           <i class="far fa-user"></i> Profile
         </a>
         <div class="dropdown-divider"></div>
-        {{-- <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger" onclick="event.preventDefault();
-                this.closest('form').submit();">
-          <i class="fas fa-sign-out-alt"></i> Logout
-        </a>
-        <form method="POST" action="{{ route('logout') }}">
-          @csrf
-          
-        </form> --}}
         <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger" onclick="event.preventDefault();
           document.getElementById('logout-form').submit();">
             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

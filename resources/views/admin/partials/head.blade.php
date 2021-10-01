@@ -94,7 +94,7 @@
         margin-left: -15px;
         text-align: center !important;
       }
-    }
+     }
   </style>
 
   @stack('style')
