@@ -37,6 +37,7 @@
             </div>
             <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Admin Dashboard</span>
             </h4>
+              @include('sweetalert::alert')
 
             <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
               @csrf
