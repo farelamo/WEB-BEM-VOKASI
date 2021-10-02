@@ -31,17 +31,22 @@ npm run dev
 composer require barryvdh/laravel-debugbar
 ```
 
-5. Run Migrate Database
+5. Install Sweet Alert
 ```
-php artisan migrate
+composer require realrashid/sweet-alert
 ```
 
 6. Run Migrate Database
 ```
+php artisan migrate
+```
+
+7. Run Migrate Database
+```
 php artisan db:seed
 ```
 
-7. Run Project
+8. Run Project
 ```
 php artisan serve
 ```
