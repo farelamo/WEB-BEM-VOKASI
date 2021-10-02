@@ -8,9 +8,6 @@
             style="margin-right: 10px">
             Tambah Kepengurusan
         </button>
-        @if (Session::has('message'))
-            <p class="alert alert-info">{{ Session::get('message') }}</p>
-        @endif
     </div>
     <div class="section-body">
         <div class="card">

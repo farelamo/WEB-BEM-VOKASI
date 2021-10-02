@@ -1,16 +1,9 @@
 @extends('admin/layouts/master')
 
-@push('style')
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-@endpush
-
 @section('isi')
 <section class="section">
     <div class="section-header">
         <h1 style="margin-right: 10px">Anggota</h1>
-        <a href="anggota/create" class="btn btn-primary" style="margin-right: 10px">
-            Tambah Baru
-        </a>
 
         {{-- BUTTON TEST SPA --}}
 
@@ -24,15 +17,12 @@
             Tambah SPA
         </button> -->
 
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#buat" aria-expanded="true" aria-controls="collapseExample">
-            Colapse
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#buat" 
+        aria-expanded="true" aria-controls="collapseExample"  style="margin-right: 10px">
+            Tambah Baru
         </button>
 
-        {{-- END TEST SPA --}}
-
-        @if (Session::has('message'))
-        <p class="alert alert-info">{{ Session::get('message') }}</p>
-        @endif
+        {{-- END BUTTON TEST SPA --}}
     </div>
 
     {{-- TESTING SPA --}}

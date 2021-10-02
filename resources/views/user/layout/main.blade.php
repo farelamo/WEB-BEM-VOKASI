@@ -32,6 +32,7 @@
 
 
   <title>BEM Vokasi</title>
+  <link rel="icon" href="{{ asset('images/LOGO BEM.png')}}" sizes="96×96" type="image/png">
 </head>
 
 <body>

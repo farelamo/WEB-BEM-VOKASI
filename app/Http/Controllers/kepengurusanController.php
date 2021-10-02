@@ -81,7 +81,7 @@ class kepengurusanController extends Controller
             ];
         }
         urus::create($kepengurusan);
-        return redirect('/kepengurusan')->with('message', 'Data Berhasil ditambahkan !!');
+        return redirect('/kepengurusan')->with('success', 'Data Berhasil ditambahkan !!');
     }
 
     /**
@@ -201,7 +201,7 @@ class kepengurusanController extends Controller
 
         $urus->update($kepengurusan);
         
-        return redirect('/kepengurusan')->with('message', 'Data Berhasil diupdate !!');
+        return redirect('/kepengurusan')->with('success', 'Data Berhasil diedit !!');
     }
 
     /**
@@ -221,7 +221,7 @@ class kepengurusanController extends Controller
             File::delete('images/kepengurusan/logo/'.$picture2);
 
             urus::find($id)->delete();
-            return redirect('/kepengurusan')->with('message', 'Data Berhasil dihapus !!');
+            return redirect('/kepengurusan')->with('success', 'Data Berhasil dihapus !!');
         } 
     }
 }

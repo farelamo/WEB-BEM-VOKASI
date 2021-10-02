@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\kalender;
+use App\Models\User;
+use App\Models\anggota;
+use App\Models\berita;
 
 class homeController extends Controller
 {
@@ -13,7 +16,10 @@ class homeController extends Controller
      */
     public function index(Request $request)
     {
-        return view('admin/index');
+        $user = User::all();
+        $anggota = anggota::all();
+        $berita = berita::all();
+        return view('admin/index', compact('user', 'anggota', 'berita'));
     }
     /**
      * Show the form for creating a new resource.

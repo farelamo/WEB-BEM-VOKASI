@@ -73,7 +73,6 @@
 
                         <hr>
                         <div class="modal-footer p-0 pt-3">
-                            <button type="button" data-dismiss="modal" class="btn btn-secondary">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-shadow">
                                 <i class="fa fa-check"></i><span> Submit</span></button>
                         </div>

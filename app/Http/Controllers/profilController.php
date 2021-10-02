@@ -92,7 +92,7 @@ class profilController extends Controller
 
         $user->update($user_update);
 
-        return redirect('/profil');
+        return redirect('/profil')->with('success', 'Data Berhasil diedit !!');;
     }
 
     /**

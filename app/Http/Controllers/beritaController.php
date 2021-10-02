@@ -60,7 +60,7 @@ class beritaController extends Controller
             ];
         }
         berita::create($berita);
-        return redirect('/berita')->with('message', 'Data Berhasil ditambahkan !!');
+        return redirect('/berita')->with('success', 'Data Berhasil ditambahkan !!');
     }
 
     /**
@@ -122,7 +122,7 @@ class beritaController extends Controller
         }
         $berita->update($berita_data);
         
-        return redirect('/berita')->with('message', 'Data Berhasil diupdate !!');
+        return redirect('/berita')->with('success', 'Data Berhasil diedit !!');
     }
 
     /**
@@ -138,7 +138,7 @@ class beritaController extends Controller
             $picture = $berita->gambar;
             File::delete("images/berita/" . $picture);
             berita::find($id)->delete();
-            return redirect('/berita')->with('message', 'Data Berhasil dihapus !!');
+            return redirect('/berita')->with('success', 'Data Berhasil dihapus !!');
         } 
     }
 }

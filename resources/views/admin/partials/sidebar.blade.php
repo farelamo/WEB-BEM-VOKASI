@@ -1,10 +1,10 @@
 <div class="main-sidebar">
   <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-      <a href="index.html">Stisla</a>
+      <a href="/dashboard">Bem Vokasi</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
-      <a href="index.html">St</a>
+      <a href="/dashboard">BV</a>
     </div>
     <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
@@ -16,13 +16,15 @@
         </li>
         <li class="nav-item dropdown">
           <a href="/anggota" class="nav-link"><i class="fas fa-users"></i><span>Anggota</span></a>
+        </li>
+        <li class="nav-item dropdown">
           <a href="/berita" class="nav-link"><i class="far fa-newspaper"></i><span>Berita</span></a>
         </li>
         <li class="nav-item dropdown">
-          <a href="/galeri" class="nav-link"><i class="fa fa-image"></i><span>Galeri</span></a>
+          <a href="/galeri" class="nav-link"><i class="far fa-images"></i><span>Galeri</span></a>
         </li>
 
-        @if( Auth::user()->level == 'superadmin')
+        @if( Auth::user()->superadmin == '1')
         <li class="nav-item dropdown">
           <a href="/user" class="nav-link"><i class="fas fa-cog"></i><span>Pengaturan User</span></a>
         </li>

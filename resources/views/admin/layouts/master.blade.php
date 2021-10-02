@@ -17,6 +17,7 @@
       <!-- END SIDEBAR -->
       
       <!-- Main Content -->
+      @include('sweetalert::alert')
       <div class="main-content">
         @yield('isi')
       </div>

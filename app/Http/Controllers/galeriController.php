@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\galeri;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use RealRashid\SweetAlert\Facades\Alert;
+// use Alert;
 
 
 class galeriController extends Controller
@@ -55,8 +57,7 @@ class galeriController extends Controller
             ];
         }
         galeri::create($Galeri);
-        return redirect('/galeri')->with('message', 'Data Berhasil ditambahkan !!');
-        
+        return redirect('/galeri')->with('success', 'Data Berhasil ditambahkan !!');
     }
 
     /**
@@ -112,7 +113,7 @@ class galeriController extends Controller
         }
         $Galeri->update($Galeri_data);
         
-        return redirect('/galeri')->with('message', 'Data Berhasil diupdate !!');
+        return redirect('/galeri')->with('success', 'Data Berhasil diedit !!');
     }
     
     /**
@@ -129,7 +130,7 @@ class galeriController extends Controller
             $picture = $Galeri->gambar;
             File::delete("images/galeri/" . $picture);
             galeri::find($id)->delete();
-            return redirect('/galeri')->with('message', 'Data Berhasil dihapus !!');
+            return redirect('/galeri')->with('success', 'Data Berhasil dihapus !!');
         } 
        
     }

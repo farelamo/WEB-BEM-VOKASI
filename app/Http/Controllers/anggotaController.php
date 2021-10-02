@@ -29,8 +29,7 @@ class anggotaController extends Controller
      */
     public function create()
     {
-        $urus = urus::all();
-        return view('admin/pages/anggota/create', compact('urus'));
+       
     }
 
     /**
@@ -91,7 +90,7 @@ class anggotaController extends Controller
         }
         anggota::create($anggota);
 
-        return redirect('/anggota')->with('message', 'Data Berhasil ditambahkan !!');
+        return redirect('/anggota')->with('success', 'Data Berhasil ditambahkan !!');
     }
 
     /**
@@ -180,7 +179,7 @@ class anggotaController extends Controller
         }
         $anggota->update($anggota_data);
 
-        return redirect('/anggota')->with('message', 'Data Berhasil diedit !!');
+        return redirect('/anggota')->with('success', 'Data Berhasil diedit !!');
     }
 
     /**
@@ -196,7 +195,7 @@ class anggotaController extends Controller
             $picture = $anggota->foto;
             File::delete("images/anggota/" . $picture);
             anggota::find($id)->delete();
-            return redirect('/anggota')->with('message', 'Data Berhasil dihapus !!');
+            return redirect('/anggota')->with('success', 'Data Berhasil dihapus !!');
         } 
     }
 }

@@ -8,7 +8,8 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Login &mdash; Stisla</title>
+  <title> L O G I N </title>
+  <link rel="icon" href="{{ asset('images/LOGO BEM.png')}}" sizes="96×96" type="image/png">
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -41,7 +42,7 @@
               @csrf
               <div class="form-group">
                 <label for="email">Email</label>
-                <input id="email" type="email" class="form-control" name="email" tabindex="1" value="{{ __('Email') }}"
+                <input id="email" type="email" class="form-control" name="email" tabindex="1" placeholder="{{ __('Email') }}"
                   required autofocus>
                 <div class="invalid-feedback">
                   Please fill in your email
