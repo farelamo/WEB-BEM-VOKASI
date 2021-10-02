@@ -19,7 +19,7 @@ class superadmin
         if(auth()->user()->superadmin == 1){
             return $next($request);
         } else {
-            return redirect('/dashboard')->with('message', 'Anda bukan Superadmin !!');
+            return redirect('/dashboard')->with('error', 'Anda bukan Superadmin !!');
         }
     }
 }
