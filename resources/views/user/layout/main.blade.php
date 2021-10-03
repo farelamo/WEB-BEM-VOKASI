@@ -37,11 +37,9 @@
 
 <body>
 
-  <!-- @include('user.partials.navbar') -->
 
   @yield('content')
 
-  <!-- @include('user.partials.footer') -->
   <!-- swiper -->
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script>
