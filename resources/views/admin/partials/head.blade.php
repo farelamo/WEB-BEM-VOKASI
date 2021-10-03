@@ -55,8 +55,8 @@
     }
 
     /*Table*/
-    #myTable {
-      width: -webkit-fill-available !important;
+    .table {
+      width: 100% !important;
     }
 
     .btn-table {
@@ -85,6 +85,10 @@
       padding: 25px;
     }
 
+    /*Calendar*/
+    .fc-col-header, .fc-daygrid-body, table.fc-scrollgrid-sync-table {
+      width: 100% !important;
+    }
     @media (max-width: 650px) {
       .fc-toolbar-chunk {
         -ms-flex: 0 0 100%;
