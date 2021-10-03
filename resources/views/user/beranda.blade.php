@@ -10,20 +10,20 @@
             </div>
         </div>
     </div>
-    ***** Preloader End ***** -->
+     Preloader End  -->
 
 
-    <!-- ***** Header Area Start ***** -->
+    <!--  Header Area Start  -->
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
+                        <!--  Logo Start  -->
                         <!-- <a href="index.html" class="logo">Training<em> Studio</em></a> -->
                         <img src="{{asset('storage/assets/images/logo.png')}}" class="logo">
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
+                        <!--  Logo End  -->
+                        <!--  Menu Start  -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
                             <li class="scroll-to-section"><a href="#features">Tentang</a></li>
@@ -35,15 +35,15 @@
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ***** Menu End ***** -->
+                        <!--  Menu End  -->
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- ***** Header Area End ***** -->
+    <!--  Header Area End  -->
 
-    <!-- ***** Main Banner Area Start ***** -->
+    <!--  Main Banner Area Start  -->
     <div class="main-banner" id="top">
         <video autoplay muted loop id="bg-video">
             <source src="{{asset('storage/assets/images/Motion.mp4')}}" type="video/mp4" />
@@ -59,110 +59,21 @@
             </div>
         </div>
     </div>
-    <!-- ***** Main Banner Area End ***** -->
+    <!--  Main Banner Area End  -->
 
-    <!-- ***** Features Item Start ***** -->
-    <section class="section" id="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading">
-                        <h2>Kabinet <em>Gantari Artha</em></h2>
-                        <img src="{{asset('storage/assets/images/line-dec.png')}}" alt="waves">
-                        <p>“Berdikari Berkarya Bersama”</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="{{asset('storage/assets/images/features-first-icon.png')}}" alt="First One">
-                            </div>
-                            <div class="right-content">
-                                <h4>Basic Fitness</h4>
-                                <p>Mewujudkan mahasiswa yang mempunyai jiwa SATRIA (Spiritual, Adaptif, Tanggap,
-                                    Rasional, Inovatif, dan Aktif)</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="{{asset('storage/assets/images/features-first-icon.png')}}" alt="second one">
-                            </div>
-                            <div class="right-content">
-                                <h4>New Gym Training</h4>
-                                <p>If you wish to support TemplateMo website via PayPal, please feel free to contact us.
-                                    We appreciate it a lot.</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="{{asset('storage/assets/images/features-first-icon.png')}}" alt="third gym training">
-                            </div>
-                            <div class="right-content">
-                                <h4>Basic Muscle Course</h4>
-                                <p>Credit goes to <a rel="nofollow" href="https://www.pexels.com" target="_blank">Pexels
-                                        website</a> for images and video background used in this HTML template.</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="{{asset('storage/assets/images/features-first-icon.png')}}" alt="fourth muscle">
-                            </div>
-                            <div class="right-content">
-                                <h4>Advanced Muscle Course</h4>
-                                <p>You may want to browse through <a rel="nofollow"
-                                        href="https://templatemo.com/tag/digital-marketing" target="_parent">Digital
-                                        Marketing</a> or <a href="https://templatemo.com/tag/corporate">Corporate</a>
-                                    HTML CSS templates on our website.</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="{{asset('storage/assets/images/features-first-icon.png')}}" alt="training fifth">
-                            </div>
-                            <div class="right-content">
-                                <h4>Yoga Training</h4>
-                                <p>This template is built on Bootstrap v4.3.1 framework. It is easy to adapt the columns
-                                    and sections.</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="{{asset('storage/assets/images/features-first-icon.png')}}" alt="gym training">
-                            </div>
-                            <div class="right-content">
-                                <h4>Body Building Course</h4>
-                                <p>Suspendisse fringilla et nisi et mattis. Curabitur sed finibus nisi. Integer nibh
-                                    sapien, vehicula et auctor.</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Features Item End ***** -->
-
-    <!-- ***** Call to Action Start ***** -->
+    <!--  Features Item Start  -->
+        @include('user.partial.slider-proker')
+    <!--  Features Item End  -->
+    
+                        
+    <!--  Call to Action Start  -->
     <section class="section" id="call-to-action">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="cta-content">
-                        <h2>Open Recruitment</h2>
-                        <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula, sit amet dapibus
-                            odio augue eget libero. Morbi tempus mauris a nisi luctus imperdiet.</p>
+                        <h2>Come and Join US!</h2>
+                        <p>Jadilah bagian dari kami, untuk Vokasi Universitas Brawijaya yang lebih maju</p>
                         <div class="main-button scroll-to-section">
                             <a href="#our-classes">Become a member</a>
                         </div>
@@ -171,9 +82,9 @@
             </div>
         </div>
     </section>
-    <!-- ***** Call to Action End ***** -->
+    <!--  Call to Action End  -->
 
-    <!-- ***** Our Classes Start ***** -->
+    <!--  Our Classes Start  -->
     <section class="section" id="our-classes">
         <div class="container">
             <div class="row">
@@ -290,7 +201,7 @@
             </div>
         </div>
     </section>
-    <!-- ***** Our Classes End ***** -->
+    <!--  Our Classes End  -->
 
     <section class="section" id="schedule">
         <div class="container">
@@ -362,7 +273,7 @@
         </div>
     </section>
 
-    <!-- ***** Testimonials Starts ***** -->
+    <!--  Testimonials Starts  -->
     <section class="section" id="trainers">
         <div class="container">
             <div class="row">
@@ -453,9 +364,9 @@
             </div>
         </div>
     </section>
-    <!-- ***** Testimonials Ends ***** -->
+    <!--  Testimonials Ends  -->
 
-    <!-- ***** Contact Us Area Starts ***** -->
+    <!--  Contact Us Area Starts  -->
     <section class="section" id="contact-us">
         <div class="container-fluid">
             <div class="row">
@@ -468,45 +379,31 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="contact-form">
-                        <form id="contact" action="" method="post">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <fieldset>
-                                        <input name="name" type="text" id="name" placeholder="Your Name*" required="">
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <fieldset>
-                                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*"
-                                            placeholder="Your Email*" required="">
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
-                                    <fieldset>
-                                        <input name="subject" type="text" id="subject" placeholder="Subject">
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <textarea name="message" rows="6" id="message" placeholder="Message"
-                                            required=""></textarea>
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <button type="submit" id="form-submit" class="main-button">Send Message</button>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </form>
+                        <div class="social-media">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item fw-bold py-3">
+                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-instagram fa-lg icon-sosmed"></i> 
+                                    @bemvokasiub
+                                </li>
+                                <li class="list-group-item fw-bold py-3">
+                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-twitter fa-lg icon-sosmed"></i> 
+                                    @bemvokasiub</li>
+                                <li class="list-group-item fw-bold py-3">
+                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-youtube fa-lg icon-sosmed"></i> 
+                                    @bemvokasiub</li>
+                                <li class="list-group-item fw-bold py-3">
+                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-envelope icon-sosmed"></i> 
+                                    @bemvokasiub</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ***** Contact Us Area Ends ***** -->
+    <!--  Contact Us Area Ends  -->
 
-    <!-- ***** Footer Start ***** -->
+    <!--  Footer Start  -->
     <footer>
         <div class="container">
             <div class="row">

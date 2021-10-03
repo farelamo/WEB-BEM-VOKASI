@@ -138,6 +138,7 @@ hgroup {
 
 * {
     box-sizing: border-box;
+    font-family: "Prompt", sans-serif;
 }
 
 html,
@@ -1084,7 +1085,7 @@ contact
 }
 
 #contact-us .contact-form {
-    padding: 80px;
+    padding: 170px 80px;
     background-image: url(../storage/assets/images/contact-bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -1314,4 +1315,124 @@ responsive
     .feature-item .right-content a.text-button {
         margin-left: 130px;
     }
+}
+
+/* typography */
+.text-md-head {
+    font-size: 24px;
+    font-weight: 400;
+}
+.text-lg-head {
+    font-size: 48px;
+    font-weight: 500;
+}
+.text-sm-head {
+    font-size: 18px;
+    font-weight: 200;
+}
+.text-primary-1 {
+    color: #4c1c1f;
+}
+
+/* navbar */
+.navbar-bg {
+    background-color: #e5e5e5 !important;
+}
+.navbar-brand {
+    padding: 30px 50px;
+}
+.text-nav {
+    padding: 20px 0 0;
+}
+.nav-link,
+.dropdown-item {
+    font-size: 18px;
+    font-weight: 500;
+    color: #8b343a !important;
+}
+.nav-link {
+    margin: 0 10px;
+}
+.dropdown-menu {
+    display: block;
+    background-color: transparent;
+}
+
+/* jumbotron */
+.jumbotron {
+    background-image: url(../images/carouImage.png);
+    background-size: cover;
+    height: 820px;
+    padding: 200px 0 0;
+    text-align: left;
+    position: relative;
+}
+.jumbotron .container {
+    z-index: 1;
+    position: relative;
+}
+.jumbotron::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(224, 224, 224, 1),
+        rgba(0, 0, 0, 0)
+    );
+}
+.display-4 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
+}
+.btn-jumbotron {
+    text-transform: uppercase !important;
+    padding: 14px 20px !important;
+    border-radius: 32px !important;
+    background-color: #4c1c1f !important;
+    color: white !important;
+    box-shadow: 5px 5px 10px rgb(26, 26, 26) !important;
+}
+
+/* visi - misi */
+#visi-misi {
+    margin: 0 0 100px;
+    padding: 50px 0;
+    background-color: #bbb09c58;
+}
+
+/* program-kerja */
+#program-kerja {
+    margin: 0 0 100px;
+}
+.slider-proker {
+    margin: 0 50px;
+    overflow-x: visible;
+}
+.desc-proker {
+    font-size: 18px;
+    border-radius: 32px;
+    background-color: #f1eee5;
+    padding: 50px 50px;
+}
+
+/* organization */
+#organization {
+    margin: 0 0 100px;
+    text-align: center;
+}
+
+/* gallery */
+#galeri {
+    margin: 0 0 100px;
+}
+
+/* footer */
+#footer {
+    background-color: #4c1c1f;
+    color: #fff;
+    padding: 20px 50px;
 }
