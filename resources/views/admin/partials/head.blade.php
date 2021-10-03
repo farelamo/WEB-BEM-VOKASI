@@ -55,6 +55,10 @@
     }
 
     /*Table*/
+    #myTable {
+      width: -webkit-fill-available !important;
+    }
+
     .btn-table {
       padding: 2px !important;
       width: 24px;
