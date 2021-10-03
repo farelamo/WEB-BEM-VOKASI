@@ -48,16 +48,18 @@ class FortifyServiceProvider extends ServiceProvider
         });
 
         // error
-        // Fortify::authenticateUsing(function (Request $request) {
-        //     $user = User::where('email', $request->email)->first();
+        Fortify::authenticateUsing(function (Request $request) {
+            $user = User::where('email', $request->email)->first();
     
-        //     if ($user &&
-        //         Hash::check($request->password, $user->password)) {
-        //         return $user;
-        //     } else {
-        //         $request->session()->flash('warning', 'Username / Password Anda Salah !!');
-        //         return false;
-        //     }
-        // });
+            if ($user &&
+                Hash::check($request->password, $user->password)) {
+                $request->session()->flash('toast_success', 'Anda Berhasil Login !!');
+                return $user;
+                
+            } else {
+                $request->session()->flash('warning', 'Username / Password Anda Salah !!');
+                return false;
+            }
+        });
     }
 }
