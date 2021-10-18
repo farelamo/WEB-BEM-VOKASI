@@ -21,7 +21,7 @@
                     <nav class="main-nav">
                         <!--  Logo Start  -->
                         <!-- <a href="index.html" class="logo">Training<em> Studio</em></a> -->
-                        <img src="{{asset('storage/assets/images/logo.png')}}" class="logo">
+                        <img src="{{asset('images/logo.png')}}" class="logo">
                         <!--  Logo End  -->
                         <!--  Menu Start  -->
                         <ul class="nav">
@@ -46,7 +46,7 @@
     <!--  Main Banner Area Start  -->
     <div class="main-banner" id="top">
         <video autoplay muted loop id="bg-video">
-            <source src="{{asset('storage/assets/images/Motion.mp4')}}" type="video/mp4" />
+            <source src="{{asset('images/Motion.mp4')}}" type="video/mp4" />
         </video>
 
         <div class="video-overlay header-text">
@@ -91,7 +91,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Biro <em>& Kementrian</em></h2>
-                        <img src="{{asset('storage/assets/images/line-dec.png')}}" alt="">
+                        <img src="{{asset('images/line-dec.png')}}" alt="">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor,
                             ultricies fermentum massa consequat eu.</p>
                     </div>
@@ -100,21 +100,21 @@
             <div class="row" id="tabs">
                 <div class="col-lg-4">
                     <ul>
-                        <li><a href='#tabs-1'><img src="{{asset('storage/assets/images/tabs-first-icon.png')}}" alt="">Biro Administrasi</a>
+                        <li><a href='#tabs-1'><img src="{{asset('images/tabs-first-icon.png')}}" alt="">Biro Administrasi</a>
                         </li>
-                        <li><a href='#tabs-2'><img src="{{asset('storage/assets/images/tabs-first-icon.png')}}" alt="">Biro
+                        <li><a href='#tabs-2'><img src="{{asset('images/tabs-first-icon.png')}}" alt="">Biro
                                 Puskominfo</a></a></li>
-                        <li><a href='#tabs-3'><img src="{{asset('storage/assets/images/tabs-first-icon.png')}}" alt="">Kementrian
+                        <li><a href='#tabs-3'><img src="{{asset('images/tabs-first-icon.png')}}" alt="">Kementrian
                                 PSDM</a></a></li>
-                        <li><a href='#tabs-4'><img src="{{asset('storage/assets/images/tabs-first-icon.png')}}" alt="">Kementrian
+                        <li><a href='#tabs-4'><img src="{{asset('images/tabs-first-icon.png')}}" alt="">Kementrian
                                 Pora</a></a></li>
-                        <li><a href='#tabs-5'><img src="{{asset('storage/assets/images/tabs-first-icon.png')}}" alt="">Kementrian
+                        <li><a href='#tabs-5'><img src="{{asset('images/tabs-first-icon.png')}}" alt="">Kementrian
                                 Perhubungan</a></a></li>
-                        <li><a href='#tabs-6'><img src="{{asset('storage/assets/images/tabs-first-icon.png')}}" alt="">Kementrian
+                        <li><a href='#tabs-6'><img src="{{asset('images/tabs-first-icon.png')}}" alt="">Kementrian
                                 Sosma</a></a></li>
-                        <li><a href='#tabs-7'><img src="{{asset('storage/assets/images/tabs-first-icon.png')}}" alt="">Kementrian
+                        <li><a href='#tabs-7'><img src="{{asset('images/tabs-first-icon.png')}}" alt="">Kementrian
                                 Advokesma</a></a></li>
-                        <li><a href='#tabs-8'><img src="{{asset('storage/assets/images/tabs-first-icon.png')}}" alt="">Kementrian
+                        <li><a href='#tabs-8'><img src="{{asset('images/tabs-first-icon.png')}}" alt="">Kementrian
                                 Kastrat</a></a></li>
                         <!-- <div class="main-rounded-button"><a href="#">View All Schedules</a></div> -->
                     </ul>
@@ -122,78 +122,78 @@
                 <div class="col-lg-8">
                     <section class='tabs-content'>
                         <article id='tabs-1'>
-                            <img src="{{asset('storage/assets/images/Admin.png')}}" alt="First Class">
+                            <img src="{{asset('images/Admin.png')}}" alt="First Class">
                             <h4>Biro Administrasi</h4>
                             <p>Biro Administrasi memiliki tugas pokok dan fungsi dengan segala hal yang berkaitan dengan administrasi kesekretariatan dan administrasi keuangan demi terciptanya program kerja BEM Vokasi UB yang lebih baik.</p>
                             <div class="main-button">
-                                <a href="#schedule">View Schedule</a>
+                                <a href="#schedule">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-2'>
-                            <img src="{{asset('storage/assets/images/Puskom.png')}}" alt="Second Training">
+                            <img src="{{asset('images/Puskom.png')}}" alt="Second Training">
                             <h4>Biro Puskominfo</h4>
                             <p>Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a
                                 velit. Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus
                                 nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius
                                 natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                             <div class="main-button">
-                                <a href="#">View Schedule</a>
+                                <a href="#">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-3'>
-                            <img src="{{asset('storage/assets/images/PSDM.png')}}" alt="Third Class">
+                            <img src="{{asset('images/PSDM.png')}}" alt="Third Class">
                             <h4>Kementrian PSDM</h4>
                             <p>PSDM terbagi menjadi 2 yaitu PSDM INTERNAL Yang menaungi pengembangan sumber daya  mahasiswa di dalam lingkup BEM Vokasi dan PSDM EKSTERNAL Yang menaungi pengembangan sumber daya  mahasiswa dalam lingkup luar BEM Vokasi,  termasuk mahasiswa vokasi maupun luar vokasi. Untuk proker PSDM INTERNAL sendiri yaitu Open Recruitmen Staff BEM Vokasi UB, Training Organization Staff BEM Vokasi UB, BEM Of The Month, Open Recruitmen Staff Muda BEM Vokasi UB, Training Organization Staff Muda BEM  Vokasi UB, Fun Upgrading, BEM Award dan Firewell Party. Kemudian Proker PSDM EKSTERNAL sendiri yaitu sebagai berikut, PKKMB Vokasi Universitas Brawijaya, Women Of Inspiration, Kunjungan PSDM Lingkar UB, Latihan Keterampilan Manajemen  Mahasiswa (LKMM)  
                             </p>
                             <div class="main-button">
-                                <a href="#">View Schedule</a>
+                                <a href="#">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-4'>
-                            <img src="{{asset('storage/assets/images/Pora.png')}}" alt="Fourth Training">
+                            <img src="{{asset('images/Pora.png')}}" alt="Fourth Training">
                             <h4>Kementrian Pora</h4>
                             <p>Kementrian yang bertanggung jawab sebagai fasilitator dalam mengembangkan dan mengoptimalkan minat bakat bidang olahraga, keilmuan, kewirausahaan, dan seni mahasiswa aktif Vokasi UB. Kementrian PORA mendampingi dan menaungi 9 komunitas yang ada di Vokasi UB serta bergerak aktif membangun karakter pemuda yang berbudaya.
                             </p>
                             <div class="main-button">
-                                <a href="#">View Schedule</a>
+                                <a href="#">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-5'>
-                            <img src="{{asset('storage/assets/images/Perhub.png')}}" alt="Fourth Training">
+                            <img src="{{asset('images/Perhub.png')}}" alt="Fourth Training">
                             <h4>Kementrian Perhubungan</h4>
                             <p>Perhubungan merupakan kementerian yang digadang sebagai garda terdepan BEM Vokasi Universitas Brawijaya untuk berlangsungnya relasi terhadap pihak internal maupun eksternal agar terciptanya kesinergisan dan keharmonisan.
                             </p>
                             <div class="main-button">
-                                <a href="#">View Schedule</a>
+                                <a href="#">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-6'>
-                            <img src="{{asset('storage/assets/images/SOSMA.png')}}" alt="Fourth Training">
+                            <img src="{{asset('images/SOSMA.png')}}" alt="Fourth Training">
                             <h4>Kementrian Sosma</h4>
                             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
                                 egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget
                                 venenatis ipsum commodo et.</p>
                             <div class="main-button">
-                                <a href="#">View Schedule</a>
+                                <a href="#">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-7'>
-                            <img src="{{asset('storage/assets/images/SOSMA.png')}}" alt="Fourth Training">
+                            <img src="{{asset('images/SOSMA.png')}}" alt="Fourth Training">
                             <h4>Advokesma</h4>
                             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
                                 egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget
                                 venenatis ipsum commodo et.</p>
                             <div class="main-button">
-                                <a href="#">View Schedule</a>
+                                <a href="#">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-8'>
-                            <img src="{{asset('storage/assets/images/Kastrat.png')}}" alt="Fourth Training">
+                            <img src="{{asset('images/Kastrat.png')}}" alt="Fourth Training">
                             <h4>Kementrian Kastrat</h4>
                             <p>Kementerian Kajian dan Aksi Strategis (KASTRAT) adalah suatu kementerian yang berada di bawah bidang Sosial-Politik BEM VOKASI 2021. Kementerian ini bertanggung jawab atas fungsi Pengkajian, Pengakaran dan Penyikapan isu-isu politik yang berkembang di Nasional maupun Regional secara umum dan lingkup kampus serta Vokasi secara khusus. Kementerian ini juga menjadi kementerian yang bertanggung jawab atas terciptanya pergerakan perempuan dalam segala bidang termasuk pula dalam hal pencerdasan dan pengimplementasian kesetaraan gender.
                             </p>
                             <div class="main-button">
-                                <a href="#">View Schedule</a>
+                                <a href="#">Learn More</a>
                             </div>
                         </article>
                     </section>
@@ -209,7 +209,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading dark-bg">
                         <h2>Timeline <em>Proker</em></h2>
-                        <img src="{{asset('storage/assets/images/line-dec.png')}}" alt="">
+                        <img src="{{asset('images/line-dec.png')}}" alt="">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor,
                             ultricies fermentum massa consequat eu.</p>
                     </div>
@@ -280,7 +280,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>BPI </h2>
-                        <img src="{{asset('storage/assets/images/line-dec.png')}}" alt="">
+                        <img src="{{asset('images/line-dec.png')}}" alt="">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor,
                             ultricies fermentum massa consequat eu.</p>
                     </div>
@@ -290,7 +290,7 @@
                 <div class="col-lg-3">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="{{asset('storage/assets/images/Khosy.png')}}" alt="">
+                            <img src="{{asset('images/Khosy.png')}}" alt="">
                         </div>
                         <div class="down-content">
                             <span>Presiden</span>
@@ -309,7 +309,7 @@
                 <div class="col-lg-3">
                     <div class="trainer-item card h-100">
                         <div class="image-thumb">
-                            <img src="{{asset('storage/assets/images/allya.png')}}" alt="">
+                            <img src="{{asset('images/allya.png')}}" alt="">
                         </div>
                         <div class="down-content">
                             <span>Wakil Presiden</span>
@@ -327,7 +327,7 @@
                 <div class="col-lg-3">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="{{asset('storage/assets/images/harun.png')}}" alt="">
+                            <img src="{{asset('images/harun.png')}}" alt="">
                         </div>
                         <div class="down-content">
                             <span>Menko Kepemudaan</span>
@@ -345,7 +345,7 @@
                 <div class="col-lg-3">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="{{asset('storage/assets/images/rimba.png')}}" alt="">
+                            <img src="{{asset('images/rimba.png')}}" alt="">
                         </div>
                         <div class="down-content">
                             <span>Menko Sosial & Politik</span>

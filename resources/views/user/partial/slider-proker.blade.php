@@ -4,7 +4,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Kabinet <em>Gantari Artha</em></h2>
-                        <img src="{{asset('storage/assets/images/line-dec.png')}}" alt="waves">
+                        <img src="{{asset('images/line-dec.png')}}" alt="waves">
                         <p>“Berdikari Berkarya Bersama”</p>
                     </div>
                 </div>
@@ -13,7 +13,7 @@
                         <div class="swiper-slide">
                             <div class="logo-center text-center">
                                 <div class="logo">
-                                    <img src={{ asset('storage/assets/images/logo-bem.png') }} class="img-fluid" >
+                                    <img src={{ asset('images/logo-bem.png') }} class="img-fluid" >
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-md-7 text-center">
