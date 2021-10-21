@@ -26,7 +26,7 @@
 
         @if( Auth::user()->superadmin == '1')
         <li class="nav-item dropdown">
-          <a href="/user" class="nav-link"><i class="fas fa-cog"></i><span>Pengaturan User</span></a>
+          <a href="/user" class="nav-link"><i class="fas fa-cog"></i><span>Pengaturan Admin</span></a>
         </li>
         @endif
 

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 use App\Models\user;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use RealRashid\SweetAlert\Facades\Alert;
+
 
 class userController extends Controller
 {
@@ -75,7 +77,27 @@ class userController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = user::findorfail($id);
+        
+        if($request->has('foto')){
+            $foto = $request->foto;   
+            $foto_name = time() . $foto->getClientOriginalExtension();
+            if($foto == ''){ 
+                $foto->move(public_path() . '/images/profil' , $foto_name);
+            } else {
+                File::delete('images/profil/' . $foto);
+                $foto->move(public_path() . '/images/profil' , $foto_name);
+            }
+            $update = ['profile_photo_path' => $foto_name];
+        } else {
+            $update = [
+                'email' => $request->email,
+                // 'password' => $request->password,
+            ];
+        }
+        $user->update($update);
+        return redirect('/user')->with('success', 'Data berhasil diedit !!');
+        
     }
 
     /**

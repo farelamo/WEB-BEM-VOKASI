@@ -53,7 +53,7 @@ class FortifyServiceProvider extends ServiceProvider
     
             if ($user &&
                 Hash::check($request->password, $user->password)) {
-                $request->session()->flash('toast_success', 'Anda Berhasil Login !!');
+                $request->session()->flash('toast_success', 'Anda Berhasil Login ! !');
                 return $user;
                 
             } else {

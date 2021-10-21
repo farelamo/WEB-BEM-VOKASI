@@ -6,7 +6,7 @@ use App\Models\kalender;
 use App\Models\User;
 use App\Models\anggota;
 use App\Models\berita;
-use RealRashid\SweetAlert\Facades\Alert;
+
 
 class homeController extends Controller
 {

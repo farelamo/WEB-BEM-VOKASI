@@ -28,7 +28,6 @@ Route::middleware(["auth:sanctum", "verified"])->group( function() {
     Route::resource('/berita',   beritaController::class);
     Route::resource('/galeri',  galeriController::class);
     Route::resource('/user', userController::class)->middleware('superadmin');
-
     Route::resource('/profil', profilController::class);
     // TAMBAH DISINI ROUTE ADMIN DASHBOARD
 });
