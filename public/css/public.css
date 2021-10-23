@@ -1,0 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
+.main-button a:hover {
+  color: darkorange !important;
+}

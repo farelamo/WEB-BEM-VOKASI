@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
 
   <!-- Custom CSS -->
-  <!-- <link href={{ asset('css/public.css') }} rel="stylesheet"> -->
+  <link href={{ asset('css/public.css') }} rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 

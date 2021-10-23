@@ -1,52 +1,27 @@
 @extends('user.layout.main')
+
 @section('content')
-<!-- <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-     Preloader End  -->
-
-
-    <!--  Header Area Start  -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!--  Logo Start  -->
-                        <!-- <a href="index.html" class="logo">Training<em> Studio</em></a> -->
-                        <img src="{{asset('images/logo.png')}}" class="logo">
-                        <!--  Logo End  -->
-                        <!--  Menu Start  -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
-                            <li class="scroll-to-section"><a href="#features">Tentang</a></li>
-                            <li class="scroll-to-section"><a href="#our-classes">Biro & Kementrian</a></li>
-                            <li class="scroll-to-section"><a href="#schedule">Timeline Proker</a></li>
-                            <li class="scroll-to-section"><a href="#contact-us">Kontak</a></li>
-                            <li class="main-button"><a href="#">Sign Up</a></li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!--  Menu End  -->
-                    </nav>
+    <!-- <div id="js-preloader" class="js-preloader">
+            <div class="preloader-inner">
+                <span class="dot"></span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
-    </header>
+        Preloader End  -->
+
+
+    <!--  Header Area Start  -->
+    @include('user.partials.header')
     <!--  Header Area End  -->
 
     <!--  Main Banner Area Start  -->
     <div class="main-banner" id="top">
         <video autoplay muted loop id="bg-video">
-            <source src="{{asset('images/Motion.mp4')}}" type="video/mp4" />
+            <source src="{{asset('images/motion.mp4')}}" type="video/mp4" />
         </video>
 
         <div class="video-overlay header-text">
@@ -54,7 +29,7 @@
                 <!-- <h6>Selamat Datang</h6> -->
                 <h4>BEM Vokasi <br> <em> Universitas Brawijaya</em> </h4>
                 <div class="main-button scroll-to-section">
-                    <a href="#features">Tentang Kami</a>
+                    <a href="#tentang">Tentang Kami</a>
                 </div>
             </div>
         </div>
@@ -62,10 +37,10 @@
     <!--  Main Banner Area End  -->
 
     <!--  Features Item Start  -->
-        @include('user.partial.slider-proker')
+    @include('user.partials.slider-proker')
     <!--  Features Item End  -->
-    
-                        
+
+
     <!--  Call to Action Start  -->
     <section class="section" id="call-to-action">
         <div class="container">
@@ -75,7 +50,7 @@
                         <h2>Come and Join US!</h2>
                         <p>Jadilah bagian dari kami, untuk Vokasi Universitas Brawijaya yang lebih maju</p>
                         <div class="main-button scroll-to-section">
-                            <a href="#our-classes">Become a member</a>
+                            <a href="#biro-kementerian">Become a member</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +60,7 @@
     <!--  Call to Action End  -->
 
     <!--  Our Classes Start  -->
-    <section class="section" id="our-classes">
+    <section class="section" id="biro-kementerian">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
@@ -100,7 +75,8 @@
             <div class="row" id="tabs">
                 <div class="col-lg-4">
                     <ul>
-                        <li><a href='#tabs-1'><img src="{{asset('images/tabs-first-icon.png')}}" alt="">Biro Administrasi</a>
+                        <li><a href='#tabs-1'><img src="{{asset('images/tabs-first-icon.png')}}" alt="">Biro
+                                Administrasi</a>
                         </li>
                         <li><a href='#tabs-2'><img src="{{asset('images/tabs-first-icon.png')}}" alt="">Biro
                                 Puskominfo</a></a></li>
@@ -124,7 +100,9 @@
                         <article id='tabs-1'>
                             <img src="{{asset('images/Admin.png')}}" alt="First Class">
                             <h4>Biro Administrasi</h4>
-                            <p>Biro Administrasi memiliki tugas pokok dan fungsi dengan segala hal yang berkaitan dengan administrasi kesekretariatan dan administrasi keuangan demi terciptanya program kerja BEM Vokasi UB yang lebih baik.</p>
+                            <p>Biro Administrasi memiliki tugas pokok dan fungsi dengan segala hal yang berkaitan dengan
+                                administrasi kesekretariatan dan administrasi keuangan demi terciptanya program kerja BEM
+                                Vokasi UB yang lebih baik.</p>
                             <div class="main-button">
                                 <a href="#schedule">Learn More</a>
                             </div>
@@ -143,7 +121,15 @@
                         <article id='tabs-3'>
                             <img src="{{asset('images/PSDM.png')}}" alt="Third Class">
                             <h4>Kementrian PSDM</h4>
-                            <p>PSDM terbagi menjadi 2 yaitu PSDM INTERNAL Yang menaungi pengembangan sumber daya  mahasiswa di dalam lingkup BEM Vokasi dan PSDM EKSTERNAL Yang menaungi pengembangan sumber daya  mahasiswa dalam lingkup luar BEM Vokasi,  termasuk mahasiswa vokasi maupun luar vokasi. Untuk proker PSDM INTERNAL sendiri yaitu Open Recruitmen Staff BEM Vokasi UB, Training Organization Staff BEM Vokasi UB, BEM Of The Month, Open Recruitmen Staff Muda BEM Vokasi UB, Training Organization Staff Muda BEM  Vokasi UB, Fun Upgrading, BEM Award dan Firewell Party. Kemudian Proker PSDM EKSTERNAL sendiri yaitu sebagai berikut, PKKMB Vokasi Universitas Brawijaya, Women Of Inspiration, Kunjungan PSDM Lingkar UB, Latihan Keterampilan Manajemen  Mahasiswa (LKMM)  
+                            <p>PSDM terbagi menjadi 2 yaitu PSDM INTERNAL Yang menaungi pengembangan sumber daya mahasiswa
+                                di dalam lingkup BEM Vokasi dan PSDM EKSTERNAL Yang menaungi pengembangan sumber daya
+                                mahasiswa dalam lingkup luar BEM Vokasi, termasuk mahasiswa vokasi maupun luar vokasi. Untuk
+                                proker PSDM INTERNAL sendiri yaitu Open Recruitmen Staff BEM Vokasi UB, Training
+                                Organization Staff BEM Vokasi UB, BEM Of The Month, Open Recruitmen Staff Muda BEM Vokasi
+                                UB, Training Organization Staff Muda BEM Vokasi UB, Fun Upgrading, BEM Award dan Firewell
+                                Party. Kemudian Proker PSDM EKSTERNAL sendiri yaitu sebagai berikut, PKKMB Vokasi
+                                Universitas Brawijaya, Women Of Inspiration, Kunjungan PSDM Lingkar UB, Latihan Keterampilan
+                                Manajemen Mahasiswa (LKMM)
                             </p>
                             <div class="main-button">
                                 <a href="#">Learn More</a>
@@ -152,7 +138,10 @@
                         <article id='tabs-4'>
                             <img src="{{asset('images/Pora.png')}}" alt="Fourth Training">
                             <h4>Kementrian Pora</h4>
-                            <p>Kementrian yang bertanggung jawab sebagai fasilitator dalam mengembangkan dan mengoptimalkan minat bakat bidang olahraga, keilmuan, kewirausahaan, dan seni mahasiswa aktif Vokasi UB. Kementrian PORA mendampingi dan menaungi 9 komunitas yang ada di Vokasi UB serta bergerak aktif membangun karakter pemuda yang berbudaya.
+                            <p>Kementrian yang bertanggung jawab sebagai fasilitator dalam mengembangkan dan mengoptimalkan
+                                minat bakat bidang olahraga, keilmuan, kewirausahaan, dan seni mahasiswa aktif Vokasi UB.
+                                Kementrian PORA mendampingi dan menaungi 9 komunitas yang ada di Vokasi UB serta bergerak
+                                aktif membangun karakter pemuda yang berbudaya.
                             </p>
                             <div class="main-button">
                                 <a href="#">Learn More</a>
@@ -161,7 +150,9 @@
                         <article id='tabs-5'>
                             <img src="{{asset('images/Perhub.png')}}" alt="Fourth Training">
                             <h4>Kementrian Perhubungan</h4>
-                            <p>Perhubungan merupakan kementerian yang digadang sebagai garda terdepan BEM Vokasi Universitas Brawijaya untuk berlangsungnya relasi terhadap pihak internal maupun eksternal agar terciptanya kesinergisan dan keharmonisan.
+                            <p>Perhubungan merupakan kementerian yang digadang sebagai garda terdepan BEM Vokasi Universitas
+                                Brawijaya untuk berlangsungnya relasi terhadap pihak internal maupun eksternal agar
+                                terciptanya kesinergisan dan keharmonisan.
                             </p>
                             <div class="main-button">
                                 <a href="#">Learn More</a>
@@ -190,7 +181,12 @@
                         <article id='tabs-8'>
                             <img src="{{asset('images/Kastrat.png')}}" alt="Fourth Training">
                             <h4>Kementrian Kastrat</h4>
-                            <p>Kementerian Kajian dan Aksi Strategis (KASTRAT) adalah suatu kementerian yang berada di bawah bidang Sosial-Politik BEM VOKASI 2021. Kementerian ini bertanggung jawab atas fungsi Pengkajian, Pengakaran dan Penyikapan isu-isu politik yang berkembang di Nasional maupun Regional secara umum dan lingkup kampus serta Vokasi secara khusus. Kementerian ini juga menjadi kementerian yang bertanggung jawab atas terciptanya pergerakan perempuan dalam segala bidang termasuk pula dalam hal pencerdasan dan pengimplementasian kesetaraan gender.
+                            <p>Kementerian Kajian dan Aksi Strategis (KASTRAT) adalah suatu kementerian yang berada di bawah
+                                bidang Sosial-Politik BEM VOKASI 2021. Kementerian ini bertanggung jawab atas fungsi
+                                Pengkajian, Pengakaran dan Penyikapan isu-isu politik yang berkembang di Nasional maupun
+                                Regional secara umum dan lingkup kampus serta Vokasi secara khusus. Kementerian ini juga
+                                menjadi kementerian yang bertanggung jawab atas terciptanya pergerakan perempuan dalam
+                                segala bidang termasuk pula dalam hal pencerdasan dan pengimplementasian kesetaraan gender.
                             </p>
                             <div class="main-button">
                                 <a href="#">Learn More</a>
@@ -314,7 +310,8 @@
                         <div class="down-content">
                             <span>Wakil Presiden</span>
                             <h4>Aliyya Zara Edwina Kakiay</h4>
-                            <p>Wakil Presiden BEM merupakan sebuah jabatan satu tingkat dibawah Presiden BEM yang memiliki kualitas tindakannya sama dengan Presiden BEM. </p>
+                            <p>Wakil Presiden BEM merupakan sebuah jabatan satu tingkat dibawah Presiden BEM yang memiliki
+                                kualitas tindakannya sama dengan Presiden BEM. </p>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -332,7 +329,8 @@
                         <div class="down-content">
                             <span>Menko Kepemudaan</span>
                             <h4>Moch Mahfuth Harun</h4>
-                            <p>Mengkoordinasikan penyusunan dan penyiapan kegiatan serta pengawasan kegiatan‑kegiatan di bidang kepemudaan yang terdiri dari kementrian PSDM dan PORA</p>
+                            <p>Mengkoordinasikan penyusunan dan penyiapan kegiatan serta pengawasan kegiatan‑kegiatan di
+                                bidang kepemudaan yang terdiri dari kementrian PSDM dan PORA</p>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -382,18 +380,21 @@
                         <div class="social-media">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item fw-bold py-3">
-                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-instagram fa-lg icon-sosmed"></i> 
+                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-instagram fa-lg icon-sosmed"></i>
                                     @bemvokasiub
                                 </li>
                                 <li class="list-group-item fw-bold py-3">
-                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-twitter fa-lg icon-sosmed"></i> 
-                                    @bemvokasiub</li>
+                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-twitter fa-lg icon-sosmed"></i>
+                                    @bemvokasiub
+                                </li>
                                 <li class="list-group-item fw-bold py-3">
-                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-youtube fa-lg icon-sosmed"></i> 
-                                    @bemvokasiub</li>
+                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-youtube fa-lg icon-sosmed"></i>
+                                    @bemvokasiub
+                                </li>
                                 <li class="list-group-item fw-bold py-3">
-                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-envelope icon-sosmed"></i> 
-                                    @bemvokasiub</li>
+                                    <i class="fa bg-danger rounded-pill p-2 text-white fa-envelope icon-sosmed"></i>
+                                    @bemvokasiub
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -403,20 +404,5 @@
     </section>
     <!--  Contact Us Area Ends  -->
 
-    <!--  Footer Start  -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; 2020 Training Studio
-
-                        - Designed by <a rel="nofollow" href="https://templatemo.com" class="tm-text-link"
-                            target="_parent">TemplateMo</a></p>
-
-                    <!-- You shall support us a little via PayPal to info@templatemo.com -->
-
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('user.partials.footer')
 @endsection
