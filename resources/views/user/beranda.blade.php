@@ -104,7 +104,7 @@
                                 administrasi kesekretariatan dan administrasi keuangan demi terciptanya program kerja BEM
                                 Vokasi UB yang lebih baik.</p>
                             <div class="main-button">
-                                <a href="#schedule">Learn More</a>
+                                <a href="{{ route('bk.index', ['nama' => 'administrasi']) }}">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-2'>
@@ -115,7 +115,7 @@
                                 nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius
                                 natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                             <div class="main-button">
-                                <a href="#">Learn More</a>
+                                <a href="{{ route('bk.index', ['nama' => 'puskominfo']) }}">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-3'>
@@ -132,7 +132,7 @@
                                 Manajemen Mahasiswa (LKMM)
                             </p>
                             <div class="main-button">
-                                <a href="#">Learn More</a>
+                                <a href="{{ route('bk.index', ['nama' => 'psdm']) }}">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-4'>
@@ -144,7 +144,7 @@
                                 aktif membangun karakter pemuda yang berbudaya.
                             </p>
                             <div class="main-button">
-                                <a href="#">Learn More</a>
+                                <a href="{{ route('bk.index', ['nama' => 'pora']) }}">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-5'>
@@ -155,7 +155,7 @@
                                 terciptanya kesinergisan dan keharmonisan.
                             </p>
                             <div class="main-button">
-                                <a href="#">Learn More</a>
+                                <a href="{{ route('bk.index', ['nama' => 'perhubungan']) }}">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-6'>
@@ -165,7 +165,7 @@
                                 egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget
                                 venenatis ipsum commodo et.</p>
                             <div class="main-button">
-                                <a href="#">Learn More</a>
+                                <a href="{{ route('bk.index', ['nama' => 'sosma']) }}">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-7'>
@@ -175,7 +175,7 @@
                                 egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget
                                 venenatis ipsum commodo et.</p>
                             <div class="main-button">
-                                <a href="#">Learn More</a>
+                                <a href="{{ route('bk.index', ['nama' => 'advokesma']) }}">Learn More</a>
                             </div>
                         </article>
                         <article id='tabs-8'>
@@ -189,7 +189,7 @@
                                 segala bidang termasuk pula dalam hal pencerdasan dan pengimplementasian kesetaraan gender.
                             </p>
                             <div class="main-button">
-                                <a href="#">Learn More</a>
+                                <a href="{{ route('bk.index', ['nama' => 'kastrat']) }}">Learn More</a>
                             </div>
                         </article>
                     </section>

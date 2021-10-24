@@ -9,11 +9,11 @@
                     <!--  Logo End  -->
                     <!--  Menu Start  -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
-                        <li class="scroll-to-section"><a href="#tentang">Tentang</a></li>
-                        <li class="scroll-to-section"><a href="#biro-kementerian">Biro & Kementrian</a></li>
-                        <li class="scroll-to-section"><a href="#schedule">Timeline Proker</a></li>
-                        <li class="scroll-to-section"><a href="#contact-us">Kontak</a></li>
+                        <li class="scroll-to-section"><a href="{{ url('/#top') }}" class="active">Beranda</a></li>
+                        <li class="scroll-to-section"><a href="{{ url('/#tentang') }}">Tentang</a></li>
+                        <li class="scroll-to-section"><a href="{{ url('/#biro-kementerian') }}">Biro & Kementrian</a></li>
+                        <li class="scroll-to-section"><a href="{{ url('/#schedule') }}">Timeline Proker</a></li>
+                        <li class="scroll-to-section"><a href="{{ url('/#contact-us') }}">Kontak</a></li>
                         <li class="main-button"><a href="#">Sign Up</a></li>
                     </ul>
                     <a class='menu-trigger'>
