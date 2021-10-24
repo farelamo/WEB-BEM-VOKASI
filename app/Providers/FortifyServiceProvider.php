@@ -51,15 +51,42 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::authenticateUsing(function (Request $request) {
             $user = User::where('email', $request->email)->first();
     
-            if ($user &&
-                Hash::check($request->password, $user->password)) {
-                $request->session()->flash('toast_success', 'Anda Berhasil Login ! !');
-                return $user;
+            if ($user && Hash::check($request->password, $user->password)) {
+                
+                if($user->isApprove == 1){
+                    $request->session()->flash('toast_success', 'Anda Berhasil Login ! !');
+                    return $user;
+                }else {
+                    $request->session()->flash('warning', 'Akun anda belum di ACC !!');
+                    return false;
+                }
                 
             } else {
                 $request->session()->flash('warning', 'Username / Password Anda Salah !!');
                 return false;
             }
         });
+
+        Fortify::registerView(function () {
+            if (session('link')) {
+                $myPath = session('link');
+                $registerPath = url('/register');
+                $previous = url()->previous();
+
+                if ($previous = $registerPath) {
+                    session(['link' => $myPath]);
+                } else {
+                    session(['link' => $previous]);
+                }
+            } else {
+                session(['link' => url()->previous()]);
+            }
+            return view('auth.register');
+        });
+
+        $this->app->singleton(
+            \Laravel\Fortify\Contracts\RegisterResponse::class,
+            \App\Http\Responses\RegisterResponse::class
+        );
     }
 }

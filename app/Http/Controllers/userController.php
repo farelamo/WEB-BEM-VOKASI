@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App\Models\user;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use RealRashid\SweetAlert\Facades\Alert;
 
 
 class userController extends Controller
@@ -30,9 +29,9 @@ class userController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+
     }
 
     /**
@@ -43,7 +42,7 @@ class userController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -92,6 +91,7 @@ class userController extends Controller
         } else {
             $update = [
                 'email' => $request->email,
+                'isApprove' => $request->value,
                 // 'password' => $request->password,
             ];
         }
@@ -108,6 +108,7 @@ class userController extends Controller
      */
     public function destroy($id)
     {
-        //
+        user::find($id)->delete();
+        return redirect('/user')->with('success', 'Data Berhasil dihapus !!');
     }
 }

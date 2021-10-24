@@ -10,8 +10,11 @@ use App\Actions\Jetstream\InviteTeamMember;
 use App\Actions\Jetstream\RemoveTeamMember;
 use App\Actions\Jetstream\UpdateTeamName;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Fortify\Fortify;
 use Laravel\Jetstream\Jetstream;
-
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 class JetstreamServiceProvider extends ServiceProvider
 {
     /**
@@ -40,6 +43,63 @@ class JetstreamServiceProvider extends ServiceProvider
         Jetstream::removeTeamMembersUsing(RemoveTeamMember::class);
         Jetstream::deleteTeamsUsing(DeleteTeam::class);
         Jetstream::deleteUsersUsing(DeleteUser::class);
+
+        // Fortify::loginView(function () {
+        //     if (session('link')) {
+        //         $myPath = session('link');
+        //         // $myPath = '/dashboard';
+        //         $loginPath = url('/login');
+        //         $previous = url()->previous();
+
+        //         if ($previous = $loginPath) {
+        //             session(['link' => $myPath]);
+        //         } 
+        //         else {
+        //             session(['link' => $previous]);
+        //         }
+        //     } else {
+        //         session(['link' => url()->previous()]);
+        //     }
+        //     return view('auth.login');
+        // });
+
+        //Get Session Link for Registration View
+
+        Fortify::registerView(function () {
+            if (session('link')) {
+                $myPath = session('link');
+                $registerPath = url('/register');
+                $previous = url()->previous();
+
+                if ($previous = $registerPath) {
+                    session(['link' => $myPath]);
+                } else {
+                    session(['link' => $previous]);
+                }
+            } else {
+                session(['link' => url()->previous()]);
+            }
+            return view('auth.register');
+        });
+
+        // Fortify::authenticateUsing(function (Request $request) {
+        //     $user = User::where('isApprove', $request->auth)->first();
+
+        //     if ($user && Hash::check($request->password, $user->password)) {
+        //         return $user;
+        //     }else {
+        //         $request->session()->flash('message', 'haha hehee !!');
+        //         return false;
+        //     }
+        // });
+
+        //   register new LoginResponse & RegisterResponse
+        // $this->app->singleton(
+        //     \Laravel\Fortify\Contracts\LoginResponse::class,
+        //     \App\Http\Responses\LoginResponse::class,
+        // );
+
+       
     }
 
     /**
