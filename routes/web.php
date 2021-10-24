@@ -7,6 +7,7 @@ use App\Http\Controllers\anggotaController;
 use App\Http\Controllers\beritaController;
 use App\Http\Controllers\galeriController;
 use App\Http\Controllers\profilController;
+use App\Http\Controllers\User\BiroKementerianController as BKC;
 use App\Http\Controllers\userController;
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,13 @@ Route::get('/', function(){
     return view('user/beranda');
 });
 
-
-
-
+Route::group([
+    'prefix' => '/biro-kementerian/{nama}',
+    'where' => [
+        'nama' => 'administrasi|puskominfo|psdm|pora|perhubungan|sosma|advokesma|kastrat'
+    ]
+], function() {
+    Route::get('/', [BKC::class, 'index'])->name('bk.index');
+    Route::get('/kepengurusan', [BKC::class, 'kepengurusan']);
+    Route::get('/proker', [BKC::class, 'proker']);
+});

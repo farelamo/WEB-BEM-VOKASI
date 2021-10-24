@@ -5,3 +5,23 @@ body {
 .main-button a:hover {
   color: darkorange !important;
 }
+
+.bg-primary-2 {
+  background-color: #871f0c !important;
+}
+
+.text-primary-2 {
+  color: #871f0c !important;
+}
+
+.bg-secondary-2 {
+  background-color: #fceccf;
+}
+
+.bg-secondary-3 {
+  background-color: #e8e3d8;
+}
+
+.bg-button-2 {
+  background-color: #f4d993 !important;
+}
