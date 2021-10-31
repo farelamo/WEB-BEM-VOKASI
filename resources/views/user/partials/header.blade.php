@@ -10,8 +10,8 @@
                     <!--  Menu Start  -->
                     <ul class="nav">
                         <li class="scroll-to-section"><a href="{{ url('/#top') }}" class="active">Beranda</a></li>
-                        <li class="scroll-to-section"><a href="{{ url('/#tentang') }}">Tentang</a></li>
                         <li class="scroll-to-section"><a href="{{ url('/#biro-kementerian') }}">Biro & Kementrian</a></li>
+                        <li class="scroll-to-section"><a href="{{ url('/berita') }}">Berita</a></li>
                         <li class="scroll-to-section"><a href="{{ url('/#schedule') }}">Timeline Proker</a></li>
                         <li class="scroll-to-section"><a href="{{ url('/#contact-us') }}">Kontak</a></li>
                         <li class="main-button"><a href="#">Sign Up</a></li>

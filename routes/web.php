@@ -7,6 +7,7 @@ use App\Http\Controllers\anggotaController;
 use App\Http\Controllers\beritaController;
 use App\Http\Controllers\galeriController;
 use App\Http\Controllers\profilController;
+use App\Http\Controllers\User\BeritaController as BC;
 use App\Http\Controllers\User\BiroKementerianController as BKC;
 use App\Http\Controllers\userController;
 /*
@@ -48,3 +49,5 @@ Route::group([
     Route::get('/kepengurusan', [BKC::class, 'kepengurusan']);
     Route::get('/proker', [BKC::class, 'proker']);
 });
+
+Route::resource('berita', BC::class)->only(['index', 'show']);
