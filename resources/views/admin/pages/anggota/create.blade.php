@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="form-group">
-                            <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama" required>
+                            <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama" maxlength="100" required>
                             <div class="invalid-feedback"> <h6>Nama Harus diisi</h6> </div>
                             <div class="text-danger"> @error('nama') {{ $message }} @enderror </div>
                         </div>
@@ -32,13 +32,13 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" name="prodi" placeholder="Prodi" required>
+                            <input type="text" class="form-control" name="prodi" placeholder="Prodi"  maxlength="255" required>
                             <div class="invalid-feedback"> <h6>Prodi Harus diisi</h6> </div>
                             <div class="text-danger"> @error('prodi') {{ $message }} @enderror </div>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" name="jabatan" placeholder="Masukkan Jabatan" required>
+                            <input type="text" class="form-control" name="jabatan" placeholder="Masukkan Jabatan" maxlength="50" required>
                             <div class="invalid-feedback"> <h6>Jabatan Harus diisi</h6> </div>
                             <div class="text-danger"> @error('jabatan') {{ $message }} @enderror </div>
                         </div>

@@ -119,7 +119,7 @@
 
                     <div class="form-group">
                         <p>Email :</p>
-                        <input type="email" class="form-control" id="ee" name="email">
+                        <input type="email" class="form-control" id="ee" name="email" maxlength="100" required>
                     </div>
                     <div class="form-group d-none">
                         <p>Approve </p>

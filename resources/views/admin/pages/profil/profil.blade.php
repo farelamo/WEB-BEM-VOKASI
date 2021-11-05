@@ -35,13 +35,11 @@
                             @csrf
                             <div class="form-group mb-3">
                                 <p>Email</p>
-                                <input type="email" class="form-control" name="email" value="{{ Auth::user()->email }}"
-                                    required>
+                                <input type="email" class="form-control" name="email" value="{{ Auth::user()->email }}" maxlength="100" required>
                             </div>
                             <div class="form-group mb-3">
                                 <p>Nama</p>
-                                <input type="text" class="form-control" name="name" value="{{ Auth::user()->name }}"
-                                    required>
+                                <input type="text" class="form-control" name="name" value="{{ Auth::user()->name }}" maxlength="100" required>
                             </div>
                             <div class="row m-0">
                                 <button type="submit" class="btn btn-primary btn-shadow ml-auto" name="submit-edit"><i

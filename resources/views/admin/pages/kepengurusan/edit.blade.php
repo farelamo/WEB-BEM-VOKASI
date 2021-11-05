@@ -15,12 +15,12 @@ aria-modal="true">
                @method('PUT')
                 <div class="form-group">
                     <p>Judul</p>
-                    <input type="text" class="form-control" name="jenis" id="jenis">
+                    <input type="text" class="form-control" name="jenis" id="jenis" maxlength="100">
                     @error('jenis') <span class="error">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group">
                     <p>Deskripsi</p>
-                    <input type="text" class="form-control" name="deskripsi" id="deskripsi">
+                    <input type="text" class="form-control" name="deskripsi" id="deskripsi" maxlength="200">
                     @error('deskripsi') <span class="error">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group">

@@ -13,7 +13,7 @@
                         @method('PUT')
 
                         <div class="form-group">
-                            <input type="text" class="form-control" name="nama" value="{{ $eanggota->nama }}" placeholder="Masukkan Nama">
+                            <input type="text" class="form-control" name="nama" value="{{ $eanggota->nama }}" placeholder="Masukkan Nama" maxlength="100">
                             <div class="text-danger"> @error('nama') {{ $message }} @enderror </div>
                         </div>
 
@@ -39,12 +39,12 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" name="prodi" value="{{ $eanggota->prodi }}" placeholder="Prodi">
+                            <input type="text" class="form-control" name="prodi" value="{{ $eanggota->prodi }}" placeholder="Prodi"  maxlength="255">
                             <div class="text-danger"> @error('prodi') {{ $message }} @enderror </div>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" name="jabatan" value="{{ $eanggota->jabatan }}" placeholder="Masukkan Jabatan">
+                            <input type="text" class="form-control" name="jabatan" value="{{ $eanggota->jabatan }}" placeholder="Masukkan Jabatan" maxlength="50">
                             <div class="text-danger"> @error('jabatan') {{ $message }} @enderror </div>
                         </div>
 

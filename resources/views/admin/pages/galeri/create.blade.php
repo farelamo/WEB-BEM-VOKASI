@@ -13,7 +13,7 @@
                     @csrf
                     <div class="form-group">
                         <p>Judul Kegiatan</p>
-                        <input type="text" class="form-control" name="judul">
+                        <input type="text" class="form-control" name="judul"  maxlength="100" required>
                         @error('judul') <span class="error">{{ $message }}</span> @enderror
                     </div>
                     <div class="form-group">

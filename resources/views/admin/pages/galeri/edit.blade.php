@@ -15,7 +15,7 @@ aria-modal="true">
                @method('PUT')
                 <div class="form-group">
                     <p>Judul</p>
-                    <input type="text" class="form-control" name="judul" id="judul_kegiatan" required>
+                    <input type="text" class="form-control" name="judul" id="judul_kegiatan"  maxlength="100" required>
                     @error('judul_kegiatan') <span class="error">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group">

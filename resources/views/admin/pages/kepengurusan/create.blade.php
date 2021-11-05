@@ -14,12 +14,12 @@ aria-modal="true">
                 @csrf    
                 <div class="form-group">
                     <p>Judul</p>
-                    <input type="text" class="form-control" name="jenis">
+                    <input type="text" class="form-control" name="jenis" maxlength="100">
                     @error('jenis') <span class="error">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group">
                     <p>Deskripsi</p>
-                    <input type="text" class="form-control" name="deskripsi">
+                    <input type="text" class="form-control" name="deskripsi" maxlength="200">
                     @error('deskripsi') <span class="error">{{ $message }}</span> @enderror
                 </div>
                 <div class="form-group">
